@@ -1,0 +1,571 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>register.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+	<style type="text/css">
+	 /* 公共CSS代码  */ 
+		 *{padding: 0; margin: 0; border: 0;}
+		 body{ background-color: #E8EFF6;font-size: 14px;font-family: arial, Verdana, Geneva, Helvetica;color: #555; }
+		 a{ text-decoration: none;color:#36c;font-size: 12px; }
+		 a:HOVER{ color:red; }
+         .close{display: none;}
+	 /* 顶部logo代码  */     
+	    .head{ width: 1000px;height:50px;padding: 25px 0;}
+	    .logo{ width: 113px;height:48px;background-image: url("loginImg/myelong_login.png");  }
+/* -----注册主体开始------- */ 
+     /* 注册主体上部  */  		    
+        .register { width: 940px; padding: 36px 30px;background-color: white; }
+	    .top { width: 940px;height:38px;line-height: 42px; }
+	    .top h1 { font-size: 24px;display: inline-block;margin-right: 33px;color: #555;
+	              font-family: Microsoft YaHei, SimHei, Arial, Helvetica, sans-serif;   
+          }
+        .top a {margin-left: 13px;} 
+     /* 我有卡   */
+         .haveCard  {margin: 35px 0 0 135px; width: 165px; height:15px;font-size: 12px; }
+         .haveCard  input.w20 { width: 20px;vertical-align: middle;border: none;float: none; }
+         .havaCard_dis { width: 600px;height:150px;padding-top: 20px;display: none; }
+         .havaCard_dis ul li { margin-bottom: 20px;overflow: hidden;height:30px;list-style: none;  }
+         .havaCard_dis li p { float: left; width: 135px; text-align: right; font-size: 14px;
+	                         height: 30px;line-height: 30px;white-space: nowrap;color: #555; }
+         .havaCard_dis input,.havaCard_dis select {  width: 248px;height:30px; padding: 4px 0px; border: 1px solid #bbb; }
+  
+   /*-------下方表单信息开始-------*/ 
+      /*   定义好表单高度等信息    */   
+         .register_info { width: 940px; height:333px; padding-top: 20px; }
+	     .register_info li {margin-bottom: 20px;overflow: hidden;height:30px;list-style: none;}
+	
+		 .register_info li p {  float: left; width: 135px; text-align: right; font-size: 14px;
+	                         height: 30px;line-height: 30px;white-space: nowrap;color: #555;
+	     }	     
+	     .cf00    {color: #f00;}	
+	     .register_info li span input {width: 248px;font-size: 14px;
+                                        line-height: 16px;border: 1px solid #bbb;
+                                        padding: 6px 0;float: left;
+          }
+         .icon {display: inline-block;vertical-align: middle;padding-left: 20px;
+                 background: url(loginImg/myelong_login.png) no-repeat;visibility: hidden;
+           }
+         .icon_span { padding-left: 20px;height: 16px;line-height: 16px;margin-top: 7px;font-size: 12px;color: #999;   }
+         .register_info li span span.icon {      
+           }
+         .Num { position: relative;left:-3px;top:-2px; }
+         .input_wrong {background-position: -315px -248px;  }
+         .input_amazing { background-position: -315px -267px; }
+         .input_pass { background-position: -315px -229;  }
+	          
+	/* 修改手机一行的所有样式 */     
+	     .phone     {  height: 28px !important;overflow: visible !important;} 	     	     
+	     .phonenum { width: 105px;height: 28px;float: left;
+                     border: 1px solid #ccc;margin: 0 8px 0 0;line-height: 28px;
+                     padding: 0 0 0 5px;position: relative;overflow: visible;
+                     font-size: 12px;z-index: 11;cursor: pointer;
+                     background: url(loginImg/midify_tel.png) no-repeat 75px -1px;
+             }
+         .phonenum:HOVER { background-position: 75px -43px; }
+         .phone_input   {width: 128px !important;}
+          
+         .phonenum ul li {height: 28px;background-color: #FFF;padding: 0 5px;margin-bottom: 0;}
+	     .input_yzm   { height:35px !important; }
+	  /* 修改验证码一行的所有样式 */   
+	     .YZM_input   { width: 118px !important; }
+         .input_yzm img { margin: 0px 3px 0  8px ; }
+         .input_yzm a{   position: relative;top:-14px;}
+       
+     /* 获取短信验证码样式  */
+        .phone_pw { display:inline-block; width: 120px; height: 30px; display: block; 
+                    background-color: #37D; color: #FFF; border-radius: 4px; text-align: center;
+                    font: 14px/30px Microsoft Yahei;cursor: pointer;float: left;margin: 0 5px 0 8px;
+            }   
+        .phone_pw:HOVER {background-color: #114387;	} 
+     /* 同意艺龙促销样式  */
+        .promotion_ipt  { font-size: 12px;float: left; }
+        .promotion_ipt input.w20 { width: 20px;vertical-align: middle;border: none;float: none; }
+
+
+
+
+
+
+ .register_info li.pass_level i {
+    margin-left: 135px;
+    font-style: normal;
+    display: block;
+    margin-top: 8px;
+    font-size: 12px;
+    clear: both;
+}  
+
+.register_info li.pass_level tt {
+    display: block;
+    border: 1px solid #ff7d00;
+    height: 5px;
+    line-height: 5px;
+    width: 120px;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    margin-left: 135px;
+}     
+    /*  出行习惯代码   */
+      .out_habit,.agreeninfo  { width:805px;height:30px;margin-left: 135px;line-height: 30px; }
+      .out_habit span  { width: 84px;height:30px;padding: 0 10px;background: #f8f8f8; 
+                          border:1px solid #d9d9d9;font-size: 14px;color: #555;
+                           display: inline-block; border-bottom-color:#f8f8f8; cursor: pointer; 
+           }
+       .habit_dis  { width: 530px;height:150px;padding: 12px;border: 1px solid #d9d9d9; margin-left: 135px;background: #f8f8f8;display: none;} 
+      .habit_dis ol li{ list-style: none;width: 530px;height:30px;font-size: 12px; }
+      .habit_dis ol li p { width: 140px;height:30px;float: left;font-size: 12px;
+                            clear: left;line-height: 30px;
+           }
+       
+      .habit_dis  input.w1  { border: 2px solid #ddd;position: relative;top:5px; } 
+      .habit_dis  span { font-size: 12px;color: #555; position: relative;top:3px; }  
+      .habit_dis  input[type='radio']  { position: relative;top:3px;margin-right: 5px;  }
+      
+   /*  同意和注册按钮   */
+       .agreeninfo  {  padding: 10px 0px 5px 0px; }
+       .tiaokuan {width: 530px;border: 1px solid #d9d9d9;padding: 12px;height: 120px;
+                  overflow: auto;font-size: 12px;color: #555;line-height: 16px;
+                  margin-left: 135px;display: none;
+           }
+       
+	   .submitbut  input  {color: #fff ;margin: 30px 0 0 135px;width: 200px;height: 40px;
+	                      font-size: 18px;text-align: center;cursor: pointer;
+	                      background: url(loginImg/myelong_login.png) no-repeat 0 -348px;    
+        }
+       .submitbut  input:HOVER {background-position:0 -388px;}
+       .positionZ { position: relative;top:-5px; }
+	</style>
+	<script type="text/javascript" src="someinfo.js"></script>
+	<script type="text/javascript" src="jquery-1.6.4.min.js"></script>
+	<script type="text/javascript">
+   
+	   var reset=function(){
+	   //恢复默认的文字和背景样式
+	     $("#tip").html("请正确填写您的手机号码，以便及时确认预定信息 。").addClass("input_amazing").removeClass("input_wrong input_pass");
+	     $("#dxyzm").html("请填写接收到的短信验证码").addClass("input_amazing").removeClass("input_wrong input_pass");
+	     $("#R_mima").html("6-30个字符或数字").addClass("input_amazing").removeClass("input_wrong input_pass");
+	     $("#E_mima").html("请再次输入密码。").addClass("input_amazing").removeClass("input_wrong input_pass");	   
+	   }
+  // jquery方法   
+	   $(function(){
+	       //写入下拉框级联
+	             $("select[name='cardType']").change(function(){
+	                 var nowval = $(this).children("option:selected").val();
+	                 $("select[name='cardName'] option").remove();  
+	                $.each( cnVal[nowval], function(i){ 
+                     $("select[name='cardName']").append("<option value='"+cnVal[nowval][i]+"'>"+cnText[nowval][i]+"</option>");                 
+                     });      
+	             });
+	   
+		   //显示下拉框  
+			      $(".phonenum").click(function(){$("#phoneTypeList").toggle();});	
+		   //修改下拉框中的值	
+			      $("li[method='selectPhoneType']").click(function(){
+			      
+/*		          var pattern = new RegExp("[()]");  
+              if($("#name").val() != "" && $("#name").val() != null){  
+                     if(pattern.test($("#name").val())){  
+                         alert("非法字符！");  
+                         $("#name").attr("value","");  
+                         $("#name").focus();  
+                          return false;  
+                         }  
+               }  */
+               
+			          $(this).text()
+			          $("#phoneInfo").text($(this).text().replace(/\051|\050/g,''));
+			          $("#PhoneInfo").val($(this).val());		          
+			      });	     
+		   //改变验证码的图
+		        $(".changeImg").toggle(function(){
+		            $(this).prev().attr("src","loginImg/getValidateCode2.jpg");	
+		            $(this).prev().attr("value","EXL3");	        
+		        },function(){
+		            $(this).prev().attr("src","loginImg/getValidateCode3.jpg");
+		            $(this).prev().attr("value","4gZb");		        
+		        },function(){
+		            $(this).prev().attr("src","loginImg/getValidateCode1.jpg");
+		            $(this).prev().attr("value","OqXF");		        
+		        });	
+		   //显示隐藏是否有卡
+		      $("input[id=IshaveCardReg]").click(function(){
+		         if ( $(this).is(':checked') ){
+		                $(".havaCard_dis").show();
+		            }else{
+		                $(".havaCard_dis").hide();
+		            }		      		      
+		      });
+		   	 
+		   // 显示隐藏出行习惯
+		        $(".out_habit span").click(function(){
+		             $(".habit_dis").toggle();
+		            
+		        });
+		   //  查看条款
+		        $("#readItems").click(function(){
+		             $(".tiaokuan").toggle();
+		             aa();
+		        });    
+//------所有的正则验证 ---------- 
+           //  所有input输入框获得焦点事件  包括手机 短信验证码  密码  再次输入密码  执行结果都相同
+            
+          
+		      $("#mobile,#MessageCode,#MMcode,#REMMcode").focus(function(){
+		         if( $(this).val()=='' ){
+		             reset;
+		             $(this).parent().next().css("visibility","hidden");	
+		         }else{
+
+		         }		            	      
+		      });
+		      
+		      $("input[name='cardNum']").blur(function(){
+		          if( $(this).val()=='' ){		             
+		             $(this).next().css("visibility","hidden");	
+		         }else if( yh.test($(this).val()) ){
+                     $(this).next().html(" ").css("visibility","visible").addClass("input_pass").removeClass("input_amazing input_wrong");
+		         }else{
+		             $(this).next().html("卡号错误").css("visibility","visible").addClass("input_wrong").removeClass("input_amazing input_pass");
+		         }	
+		      });
+		      
+	//--------  所有input输入框失去焦点事件  包括手机 短信验证码  密码  再次输入密码  
+              $("#mobile").blur(function(){
+                 if( $(this).val()=='' ){  
+		              $(this).parent().next().hide();	
+		          }else if( phoneNum.test($("#mobile").val()) ){		                
+                       $("#tip").html(" ").css("visibility","visible").addClass("input_pass").removeClass("input_amazing input_wrong");
+	                }else{
+	                   $("#tip").html("请输入正确的手机号。").css("visibility","visible").addClass("input_wrong").removeClass("input_amazing input_pass");	                  
+	                }
+              });
+              $("#MessageCode").blur(function(){
+                 if( $(this).val()=='' ){  
+		              $(this).parent().next().css("visibility","hidden");	
+		          }else if( DTMMNum.test($("#MessageCode").val()) ){		                
+                       $("#dxyzm").html(" ").css("visibility","visible").addClass("input_pass").removeClass("input_amazing input_wrong");
+	                }else{
+	                   $("#dxyzm").html("短信验证码不正确。").css("visibility","visible").addClass("input_wrong").removeClass("input_amazing input_pass");	                  
+	                }
+              });
+              $("#MMcode").blur(function(){
+                 if( $(this).val()=='' ){  
+		              $(this).parent().next().css("visibility","hidden");	
+		          }else if( mymm.test($("MMcode").val()) ){		                
+                       $("#R_mima").html(" ").css("visibility","visible").addClass("input_pass").removeClass("input_amazing input_wrong");
+	                }else{
+	                   $("#R_mima").html("6-30个字符或数字组成，请重新输入。").css("visibility","visible").addClass("input_wrong").removeClass("input_amazing input_pass");	                  
+	                }
+              });
+              $("#REMMcode").blur(function(){
+                 if( $(this).val()=='' ){  
+		              $(this).parent().next().css("visibility","hidden");	
+		          }else if( $("#REMMcode").val()==$("#MMcode").val()?true:false ){		                
+                       $("#E_mima").html(" ").css("visibility","visible").addClass("input_pass").removeClass("input_amazing input_wrong");
+	                }else{
+	                   $("#E_mima").html("两次密码输入不一致，请重新输入。").css("visibility","visible").addClass("input_wrong").removeClass("input_amazing input_pass");	                  
+	                }
+              });
+
+   //  邮箱验证
+              $("#youxiang").blur(function(){
+                   if( $(this).val()=='' ){  
+		              $(this).parent().next().css("visibility","hidden");	
+		          }else if( address.test($(this).val()) ){		                
+                       $(this).parent().next().html(" ").css("visibility","visible").addClass("input_pass").removeClass("input_amazing input_wrong");
+	                }else{
+	                    $(this).parent().next().html("邮箱输入错误，请核对后重新输入。").css("visibility","visible").addClass("input_wrong").removeClass("input_amazing input_pass");	                  
+	                }
+              
+              
+              });
+           //  立即注册按钮  检测信息是否填完
+               $("input[id='regSubmit']").click(function(){
+                     var sum=0;
+                     $.each( $("input[method='checknone']"), function(i){ 
+		                    if( $(this).val()=='' ){
+		                       sum +=1;
+		                    }else{
+
+		                    }                 
+		               }); 
+		             if( !sum==0 ){
+		                 alert("信息未填完，带有*号都必须填写");
+		             }       
+               });
+
+/*		      $("#mobile,#MessageCode,#MMcode,#REMMcode").blur(function(){
+		          if( $(this).val()=='' ){  
+		            $(this).parent().next().hide();	
+		          }	else{
+		     // switch 判断是哪个id选中 并且返回 正则检测后的 返回结果RZ  
+				        switch (  $(this).attr("id")  ) {
+		                    case "mobile":   	RZ = phoneNum.test($("#mobile").val());
+		                                       if( phoneNum.test($("#mobile").val()) ){
+		                                       
+		                                       }else{
+		                                       
+		                                       }
+		                       	                       
+		                       
+		                        break;
+		                    case "MessageCode": RZ = DTMMNum.test( $("#MessageCode").val() );
+		                        break;
+		                    case "MMcode":	    RZ = mymm.test( $("#MMcode").val() );
+		                        break; 
+		                    case "REMMcode":    RZ = $("#REMMcode").val()==$("#MMcode").val()?true:false;
+		                        break;
+		                    default:		                     
+	                     }
+	                   alert(RZ);
+	                  
+		          
+		          }      
+		      });*/   		   
+		   });
+	
+	</script>
+  </head>
+  
+  <body>
+	  <div align="center">
+<!--------- 顶部logo ------------->
+		      <div class="head" align="left">
+		        <div class="logo"></div>
+		      </div>
+		      
+<!---------  注册主体内容 ---------->
+              <div class="register" align="left">
+          <!------ 注册顶部 ------->
+	               <div class="top">
+	                 <h1>注册新会员</h1>
+	                 <span>已有艺龙账号，</span>
+	                 <a href="login.html">直接登录</a>
+	               </div>
+          <!------- 我有艺龙合作卡-------->
+              <div style="border-bottom: 1px dashed #ddd;width: 465px;">
+                   <div class="haveCard">
+                        <input type="checkbox" id="IshaveCardReg"  value="1" class="w20"><span>我有艺龙合作卡 </span>                                        
+                   </div> 
+          <!------- 隐藏显示部分  display--------> 
+                   <div class="havaCard_dis">
+                       <ul>
+                          <li>
+                             <p>
+                               <span class="cf00">*</span>
+                                                                                       卡类型：
+                             </p>
+	                             <select name="cardType">
+		                            <option value="12">银行卡类</option>
+		                            <option value="17">酒店合作类</option>
+		                            <option value="13">无线通讯类</option>
+		                            <option value="14">购物消费类</option>
+		                            <option value="15">航空类</option>
+		                            <option value="16">其他</option>
+		                            <option value="11">所有联名卡[按首字拼音排序]</option>
+	                             </select>
+                          </li>
+                          <li>
+                             <p>
+                               <span class="cf00">*</span>
+                                                                                       卡名称：
+                             </p>
+                             <select name="cardName"></select>
+                          </li>
+                          <li>
+                             <p>
+                                                                                       卡号：
+                             </p>
+                             <input type="text" name="cardNum">
+                             <span  method="tip" class="icon input_wrong icon_span Num close">卡号错误</span>
+                          </li>
+                       
+                       </ul> 
+                   </div>                                       
+              </div>
+                   
+          <!------- 下面信息表单-------->
+                   <ul  class="register_info">                   
+                         <li class="phone">
+                             <p>
+                               <span class="cf00">*</span>
+                                                                                       手机：
+                             </p>
+	                         <span id="phoneNum" class="phonenum" method="showPhoneTypes">
+	                             <span id="phoneInfo" value="1" method="showPhoneTypes">中国大陆+86</span>
+		                             <ul id="phoneTypeList" style="display: none;">
+		                                  <li value="1" method="selectPhoneType">中国大陆(+86)</li>
+		                                  <li value="2" method="selectPhoneType">中国香港(+852)</li>
+		                                  <li value="3" method="selectPhoneType">中国澳门(+853)</li>
+		                                  <li value="4" method="selectPhoneType">中国台湾(+886)</li>
+		                             </ul>
+	                         </span>
+	                         <span>
+	                               <input class="phone_input" id="mobile" value="" name="mobile"  method="checknone">
+	                               
+	                         </span>
+	                         <span id="tip" method="tip" class="icon input_wrong icon_span close">请正确填写您的手机号码，以便及时确认预定信息 。</span>
+                         
+                         </li>
+                         
+                         <li class="input_yzm">
+                             <p>
+                               <span class="cf00">*</span>
+                                                                                       输入验证码：
+                             </p>
+                             <span>
+                                   <input class="YZM_input" id="validateCode" name="validateCode" method="checknone">
+                             </span>
+                             <img src="loginImg/getValidateCode1.jpg" />
+	                         <a href=" javascript:void(0); "  class="changeImg">看不清，换一张</a>	                                                                     
+                         </li>                                                                          
+                         <li>
+                             <p>
+                               <span class="cf00">*</span>
+                                                                                       短信验证码：
+                             </p>
+                             <span>
+                                   <input class="YZM_input" id="MessageCode" method="checknone">
+                             </span>
+                             <span id="dxyzm"  method="tip" class="icon input_wrong icon_span Num close">请填写接收到的短信验证码</span>
+                             <span class="phone_pw">获取动态密码</span>
+                             
+
+                         </li>
+                         
+                         
+                         <li>
+                             <p>
+                               <span class="cf00">*</span>
+                                                                                       邮箱：
+                             </p>
+                             <span>
+                                   <input class="" id="youxiang" method="checknone">
+                             </span>
+                             <span  method="tip" class="icon input_wrong icon_span close">邮箱输入错误，请核对后重新输入。</span>
+                          
+                         </li>
+                         
+                         <li class="pass_level">
+                             <p>
+                               <span class="cf00">*</span>
+                                                                                       密码：
+                             </p>
+                             <span>
+                                   <input id="MMcode" method="checknone">
+                             </span>
+                             <span id="R_mima"  method="tip" class="icon input_wrong icon_span">6-30个字符或数字</span>
+                             <i style="display: block;" id="pwstrengthtxt">密码强度：弱</i>
+                             <tt class="mb5" id="pwstrength" style="display: block;"><s class="low"></s><s class="normal" style="display: none;"></s><s class="high" style="display: none;"></s> </tt>
+                         
+                         </li>
+                   
+                         <li>  
+                             <p>
+                               <span class="cf00">*</span>
+                                                                                       再次输入密码：
+                             </p> 
+                              <span>
+                                   <input id="REMMcode" method="checknone">
+                             </span> 
+                              <span  id="E_mima" method="tip" class="icon  input_wrong icon_span close">请再次输入密码。</span>                                                  
+                         </li>
+                         
+                         <li>
+                               <p></p>
+                               <span class="promotion_ipt">
+                                  <input type="checkbox" checked="checked" id="getSalesPromotionMsgCheckBox" name="" class="w20">同意接受艺龙发送的促销信息。
+                               </span>
+                         </li>
+                   </ul>
+          <!------- 出行习惯和同意条款-------->
+                   <div class='out_habit'>
+                      <span>填写出行习惯</span>                                     
+                   </div>
+            <!------- 出行习惯显示隐藏部分-------->       
+                   <div class="habit_dis">
+                        <ol>
+                           <li>
+                             <p>您的常住城市：</p>
+                             <input type="text" method="prefCity" id="prefCityInput" class="w1">
+                             <span class="l_black">（支持中文/拼音）</span>
+                           </li>
+                           <li>
+                              <p>您的出差频率：</p>
+                                    
+                              <input type="radio" name="chuchai">基本不出差
+                              <input type="radio" name="chuchai">一月一次
+                              <input type="radio" name="chuchai">一季度一次
+                              <input type="radio" name="chuchai">一年一次
+                           </li>
+                           <li>
+                              <p>出差时入住酒店价位</p>
+                              <input type="radio" name="money">150以下
+                              <input type="radio" name="money">150-300元
+                              <input type="radio" name="money">300-600元
+                              <input type="radio" name="money">600元以上                                  
+                           </li>
+                           <li>
+                              <p>您的旅游频率：</p>
+                              <input type="radio" name="frequency">1年1-2次 
+                              <input type="radio" name="frequency">1季度1次
+                              <input type="radio" name="frequency">1月至少1次                                 
+                           </li>
+                           <li>
+                              <p>旅游时入住酒店价位：</p>
+                              <input type="radio" name="ruzhu">150以下
+                              <input type="radio" name="ruzhu">150-300元
+                              <input type="radio" name="ruzhu">300-600元
+                              <input type="radio" name="ruzhu">600元以上              
+                           </li>
+                        
+                        </ol>
+                   </div>
+              <!------- 同意条款以及注册按钮-------->     
+                   <div class="agreeninfo">
+	                   <span class="promotion_ipt" style="padding-right: 8px;">
+	                         <input type="checkbox" id="getSalesPromotionMsgCheckBox" name="" class="w20">同意艺龙旅行网服务条款	                      
+	                   </span>
+                       <a href="#" id="readItems">查看条款</a>
+                       <span  method="tip" class="icon  input_wrong icon_span positionZ">两次密码输入不一致，请重新输入。</span>
+                   </div>                                                                           
+                   <div class="tiaokuan">
+					            <p class="tc">
+									《艺龙旅行网服务条款》
+								</p>
+								<p>
+									1．艺龙旅行网服务条款的确认
+								</p>
+								<p>
+									<span class="ti2em"></span>艺龙旅行网的所有权与运作权归北京艺龙信息技术有限公司（以下简称"艺龙"）所有。本服务条款具有法律约束力。一旦您点选"注册"并通过注册程序，即表示您自愿接受本协议之所有条款，并已成为艺龙旅行网的注册会员。
+								</p>
+								<p>
+									<span class="ti2em"></span>用户在享用艺龙网络会员服务的同时，同意接受艺龙网络会员服务提供的各类信息服务。
+								</p>
+								<p>
+									2．服务内容
+								</p>
+								<p>
+									<span class="ti2em"></span>2.1艺龙旅行网服务的具体内容由艺龙根据实际情况提供，艺龙对其所提供之服务拥有最终解释权。
+								</p>
+								<p>
+									<span class="ti2em"></span>2.2艺龙在艺龙旅行网上向其会员提供相关网络服务，与相关网络服务有关的设备（如个人电脑、手机、及其他与接入互联网或移动网有关的装置）及所需的费用（如为接入互联网而支付的电话费及上网费、为使用移动网而支付的手机费）均由会员自行负担。
+								</p>
+								<p>
+                   
+                   
+                   </div>                                                      
+                   <div class="submitbut">
+                     <input id="regSubmit" class="submitBtn" type="button"  value="立即注册">                   
+                   </div>
+              </div>
+	  </div>
+  </body>
+</html>

@@ -1,0 +1,506 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>login.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+	<style type="text/css">
+	/* 公共CSS代码  */ 
+	    *{padding: 0; margin: 0; border: 0;}
+	    body{ background-color: #E8EFF6;font-size: 12px;font-family: arial, Verdana, Geneva, Helvetica;min-width: 1010px;min-height: 630px;}
+	    a{ text-decoration: none; }
+	    a:HOVER{ color:red; }
+	
+	/* 顶部logo代码  */     
+	    .head{ width: 1000px;height:50px;padding: 25px 0; }
+	    .logo{ width: 113px;height:48px;background-image: url("loginImg/myelong_login.png");  }
+	    
+/*---------登陆盒子开始部分----------- */    
+	    .loginbox{ width: 1000px;height:350px;background-color: #fff;position: relative; }	    
+	/* -------切换登陆模式开关按钮   以及港澳台号码贴士-------- */    
+	    .switch_btn{position: absolute;left:950px;z-index: 6;}
+	    .switch_btn .a_one {
+             background: url(loginImg/myelong_login.png) no-repeat -284px -298px;
+             left: 50px;
+          }
+	    .switch_btn a {position: relative;width: 50px;height: 50px;display: block;cursor: pointer;}
+		
+		#switchCodeLogin{cursor: pointer;}
+		.top_tip  { position: absolute;width: 243px;height:18px;padding:10px; z-index: 12;top:-30px;left:110px;background-color: white;border: 1px solid gray;}
+	    .Img2{position: absolute;left:245px;top:4px;cursor: pointer;}
+	    .arrow   {display: inline-block;width: 16px;height:16px;background-color: white;
+	               border: 1px solid gray;transform:rotate(45deg);
+	               border-left-color: white;border-top-color: white;
+	               position: absolute;left:42px;top:29px;}
+	    
+     /* 左边图片代码   */ 
+	    .loginbox a img {opacity:1;filter(alpha=100);position: absolute;z-index: 3;}
+	    .loginbox a:HOVER img{opacity:0.8;filter(alpha=80);}
+	 
+	 /* 右边登陆框代码   */    
+	    .logininfo{width:376px;height:350px;display: inline-block;position: absolute;left:625px;}
+	 /*--------扫码登陆代码-----------*/  
+	     .CodeLogin    { width:285px;height:322px;padding: 24px 45px 0 45px ;position: relative;display: none;}
+	     .CodeLogin h5 { padding:30px 4px 0 0;color: #37d;font: 18px/32px Microsoft Yahei;}			
+	     #show_anima   { position: absolute;top:85px;left:239px;z-index: 2;display: none; }
+	     #login_bgg    { position: absolute;top:-124px;left:-210px;z-index: 1;}    
+	     .e_code_help  { width: 200px;height:34px;position:relative;top:5px; }
+	     .e_code_help a { position:relative;top:6px;border-radius: 16px;
+	                      border: 1px solid #ccddee;background: #fff;
+		                  padding: 3px 12px;color: #555;display: block;width: 50px;
+		                  height: 16px;line-height: 16px; 
+		                  margin-left: auto; margin-right: auto;		    
+           }
+		 .e_code_help a:HOVER{background-color: #4499ff;}
+		 
+/*-----------文本登陆代码-------------*/
+	     .textLogin{ width:285px;height:322px;padding: 24px 45px 0 45px ;}
+	     .textLogin label input{ margin-right: 3px; }
+	     .textLogin label span { position: relative;top:-3px; }
+    /*----------普通登陆代码----------*/
+	     .userinfo_usual {width:285px;height:200px;padding-top: 15px;font-size: 21px; }
+	     .usual_outline {border: 1px solid #eee;border-radius:5px;}
+	     #YZM_outline {display: inline-block;border-radius:5px;border: 1px solid #eee;float: left;margin-right: 5px;}
+	     .userinfo_usual  span { position: relative;top:2px; }
+	     .userinfo_usual input { width: 255px; height: 33px;padding: 6 6 6 3;border-radius:5px;outline: none ;  }
+	    /*   验证码框 和下面的复选按钮    */
+	     .last input  { width: 149px; }
+	     .last1  input{ width: 13px; height: 13px; }
+	     .last1 span  { font-size: 12px;margin-left: 2px;position: relative;top:-2px; }
+	     .last1  a     { float: right; color:#36c;}
+	     .last1  a:HOVER    { float: right; color:red;}
+	    /*   检测登录错误的文本信息         */ 
+	     .input_tip { width: 277px;padding-left: 6px;background-color: #FFEEED;border: 1px solid #FFD1CF;
+                      color: #E61300;font-size: 12px;line-height: 18px;z-index: 10;visibility:hidden;
+          }
+       /*   提交按钮    */
+         .userinfo_usual input[type='submit'] { width: 280px; height: 40px;font-size: 20px;color: white;background-color: #ff8800; cursor: pointer;margin-top: 10px;margin-bottom: 20px;}
+         .userinfo_usual input[type='submit']:HOVER {background-color: #f60;}
+         .userinfo_usual a {font-size: 12px;}
+      /*   文字和快捷登录按钮   */   
+	     .lastfont { font-size: 12px; position: relative;top:-3px;}
+	     .lastfont span{  position: relative;top:-6px; margin-right: 10px;}
+	     .lasticon { display: inline-block; width:20px;height: 20px;border-radius:10px;margin-right: 10px;cursor: pointer; }
+	     #qq { background: url(loginImg/myelong_login.png) no-repeat 0px -214px;}
+	     #qq:HOVER { background: url(loginImg/myelong_login.png) no-repeat 0px -243px;}	     
+	     #weibo { background: url(loginImg/myelong_login.png) no-repeat -40px -214px;}
+	     #weibo:HOVER { background: url(loginImg/myelong_login.png) no-repeat -40px -243px;}	     
+	     #zhifubao { background: url(loginImg/myelong_login.png) no-repeat -80px -214px;}
+	     #zhifubao:HOVER { background: url(loginImg/myelong_login.png) no-repeat -80px -243px;}	     
+	     #renren { background: url(loginImg/myelong_login.png) no-repeat -120px -214px;}
+	     #renren:HOVER { background: url(loginImg/myelong_login.png) no-repeat -120px -243px;}
+	
+   /*------------手机登陆代码----------*/	     
+	     .userinfo_phone{width:285px;padding-top: 15px;font-size: 21px;}	     	     
+	     .userinfo_phone input { width: 168px; height: 35px;border: 1px solid #eee; padding: 6 6 6 3;border-radius:5px;box-shadow:inset 0px 4px 9px -5px rgba(0,0,0,.2); }	   
+	     .phonenum {width: 110px;height: 32px;float: left;display:inline-block;
+                    border: 1px solid #ccc; margin: 0 8px 0 0; line-height: 32px; 
+                    padding: 0 0 0 3px;  position: relative; overflow: visible; 
+                    z-index: 11;border-radius:5px;cursor: pointer;font-size: 12px;
+                    background: url(loginImg/midify_tel.png)  no-repeat  78px -1px;
+            }
+         .phonenum:HOVER{background: url(loginImg/midify_tel.png)  no-repeat  78px -43px;}
+         .phonenum ul{list-style: none;width: 100%;border: 1px solid #ccc;position: absolute;left: -1px;top: 28px;background-color: white;}
+         .phonenum ul li {height: 28px;background-color: #FFF;padding: 0 5px;margin-bottom: 0;}
+         
+         
+	     .phone_pw {display:inline-block; width: 110px; height: 35px; display: block; 
+                    background-color: #37D; color: #FFF; border-radius: 5px; text-align: center;
+                    font: 14px/35px Microsoft Yahei;cursor: pointer;float: right;
+            } 
+	   	   
+	    /*   验证码框 和下面的复选按钮    */
+	     #yanzhengma2 { display: inline-block;border-right: 1px solid #eee;border-left:1px solid #fff;float: left; margin-right: 5px; }
+	     .last   input  { width: 139px; }
+	     .last1  input{ width: 13px; height: 13px; }
+	     .last1  span { font-size: 12px;margin-left: 2px;margin-right: 120px;position: relative;top:-2px; }
+	     .checkbox   { visibility: hidden; }
+	     .checkbox_prev { width:13px;height:14px;float: left;position: absolute;background: url(loginImg/myelong_login.png) no-repeat -67px -100px; }
+	    
+	    /*   检测登录错误的文本信息         */ 
+	     .input_tip {width: 277px;padding-left: 6px;background-color: #FFEEED;border: 1px solid #FFD1CF;visibility:hidden;
+                     color: #E61300;font-size: 12px;line-height: 18px;z-index: 10;
+          }
+       /*   提交按钮    */
+         .userinfo_phone input[type='submit'] { width: 280px; height: 40px;font-size: 20px;color: white;background-color: #ff8800; cursor: pointer;margin-top: 10px;margin-bottom: 20px;}
+         .userinfo_phone input[type='submit']:HOVER {background-color: #f60;}
+         .userinfo_phone a{font-size: 12px;}
+	   /*   提交按钮下方贴士    */
+	   .phone_tip{ font-size: 12px; }
+	   .phone_tip_photo { display: none; }	   	   
+/*---------登陆盒子结束部分----------- */ 
+
+/*--------下方注册按钮样式 -------- */  
+	   .regis  { width: 1000px;height:20px;padding: 16px 10px 0 0; }
+ 	   .regis a {color:#36d;}
+ 	   .regis:HOVER  a{color:red;}
+ 	   .regis span {width: 16px;height: 16px;border-radius:10px;display: inline-block;position: relative;top:4px; margin-left: 3px;
+	           background: url(loginImg/myelong_login.png) no-repeat 0px -429px;
+	   }
+	   .regis:HOVER span {background: url(loginImg/myelong_login.png) no-repeat 0px -445px;}	
+	
+/* -------底部图标样式----------- */
+	    .bot_icon{ display: inline-block;width: 100px;height: 26px;margin-left: 10px;cursor: pointer; position: relative;left:4px;}
+	    .bot_icon span{ color:#666; }
+	    .bot_icon:HOVER span{color:red;}
+	    .bot_icon:HOVER #iPhone{background-position: 0px -304px;}
+	    .bot_icon:HOVER #Android{background-position: -25px -304px;}
+	    .bot_icon:HOVER #Windows{background-position: -50px -304px;}
+	    .bot_icon:HOVER #other{background-position: -75px -304px;}
+	    .bot_icon div{ width: 20px;height:20px;background-color: blue;display: inline-block; }
+	    .bot_icon span{ position: relative;top:-6px;}
+	    #iPhone  { background: url(loginImg/myelong_login.png) no-repeat 0px -277px; }
+	    #Android { background: url(loginImg/myelong_login.png) no-repeat -25px -277px; }
+	    #Windows { background: url(loginImg/myelong_login.png) no-repeat -50px -277px; }
+	    #other   { background: url(loginImg/myelong_login.png) no-repeat -75px -277px; }
+	    
+/*-------底部文字样式------*/ 
+	   .bot_text {width: 1000px;height: 30px;line-height: 20px;color: #555;}
+	   .bot_text p a {padding: 0 5px; color: #555;}
+	   .bot_text p a:HOVER {color: red;}	   	   	   	   	   
+	</style>
+    <script type="text/javascript" src="someinfo.js"></script>
+	<script type="text/javascript" src="jquery-1.6.4.min.js"></script>
+	<script type="text/javascript">
+
+	   $(function(){	  	   
+	  /* //修改input框选中和失去焦点时的边框内部的阴影
+	  
+	   $(".userinfo_phone input").focus(function (){
+	        $(this).parent().children().css("boxShadow","");
+	     });    
+
+	   $(".userinfo_phone input").blur(function(){
+	        $(this).parent().children().css("boxShadow","inset 0px 4px 9px -5px rgba(0,0,0,.2);");
+	     });*/
+	  		  
+	   //修改input选中时外部框的颜色
+			   $(".userinfo_usual input").click(function(){
+			         $(this).parent().css("borderColor","#36d").siblings().css("borderColor","#eee");   	   
+			   });
+			   $(".userinfo_usual input").blur(function(){
+			         $(this).parent().css("borderColor","#eee");   	   
+			   });	   
+			   	    	   	   
+	   // 实现二维码和账号密码登录     
+	        $("#switchCodeLogin").toggle(function(){
+	            $(".switch_btn .a_one").css("backgroundPosition","-284px -348px");
+	            $(".CodeLogin").show();	
+	            $(".textLogin").hide();		                    
+	        },function(){
+	            $(".switch_btn .a_one").css("backgroundPosition","-284px -298px");
+	            $(".CodeLogin").hide();
+	            $(".textLogin").show();	
+	        });
+	   
+	   // 实现普通登录和手机密码登录切换	        
+	        $("#usual_login").click(function(){
+	            $(".userinfo_usual").show();
+	            $(".userinfo_phone").hide();
+	        });
+	        $("#phone_login").click(function(){
+	            $(".userinfo_phone").show();
+	            $(".userinfo_usual").hide();
+	        });
+	  
+	   // 实现隐藏top贴士	   
+	       $(".Img2").click(function(){
+	            $(".top_tip").hide();	       
+	       });    
+	        
+	   // 实现鼠标放在使用帮助上  显示隐藏帮助图片
+	        $(".e_code_help").hover(function(){
+	        // 判断不在动画状态才进行动画
+	        if( !($("#login_bgg,#show_anima").is(":animated")) ){           
+	            $("#login_bgg").animate({"left":85},500);
+	            $("#show_anima").delay(500).fadeIn(500);
+	           }               
+	        },function(){
+
+	            $("#show_anima").fadeOut(500);
+	            $("#login_bgg").delay(500).animate({"left":-210},500);            
+	          
+	        });	        
+	        
+	    // 实现鼠标放在未绑定手机上  显示隐藏帮助图片    
+	        $(".phone_tip").hover(function(){
+	            $(".phone_tip_photo").toggle();	        	        
+	        });	
+	        
+	    //点击复选框图片  并修改checked属性
+				$(".checkbox").prev().toggle(function(){				    
+				    $(this).css("backgroundPosition","-54px -100px");
+				    $(this).next().attr("checked",false);
+				},function(){
+				    $(this).css("backgroundPosition","-67px -100px");
+				    $(this).next().attr("checked",true);
+				});	
+		//改变验证码的图
+		        $(".changeImg").toggle(function(){
+		            $(this).prev().attr("src","loginImg/getValidateCode2.jpg");	
+		            $(this).prev().attr("value","EXL3");	        
+		        },function(){
+		            $(this).prev().attr("src","loginImg/getValidateCode3.jpg");
+		            $(this).prev().attr("value","4gZb");		        
+		        },function(){
+		            $(this).prev().attr("src","loginImg/getValidateCode1.jpg");
+		            $(this).prev().attr("value","OqXF");		        
+		        });	
+	   //显示下拉框  
+		      $(".phonenum").click(function(){$("#PhoneTypeList").toggle();});	
+	   //修改下拉框中的值	
+		      $("li[method='selectPhoneType']").click(function(){
+		          $("#PhoneType").text( $(this).text().replace(/\051|\050/g,'') );
+		          $("#PhoneType").val($(this).val());		          
+		      });
+// ----------正则检测 ----------------- 	       
+	//----------手机登录登录正则
+	        $("#phone_submit").click(function(){	            
+	            var phone_check=$("#phone_check").val();
+	            var DTMM=$("#DTMM").val();
+	            var phone_RS= phoneNum.test(phone_check);
+	            var DTMM_RS= DTMMNum.test(DTMM);
+	           
+	            if( phone_RS ){	         
+	                 $("#phone_checkRS").css("visibility","hidden");
+	         //验证成功手机号输入正确，接下来验证是否输入动态密码
+	              if( DTMM=='' ){
+	                  $("#DTMM_check").css("visibility","visible");
+	              }else{  $("#DTMM_check").css("visibility","hidden");
+	               if( DTMM_RS ){
+	          //检查是否填入验证码	           
+			           var YZM_2_check=$("#YZM_2_check").val();
+			           if( !(YZM_2_check=='OqXF' || YZM_2_check=='EXL3' || YZM_2_check=='4gZb') ){
+			               $("#YZM_2").css("visibility","visible");
+			               $("#YZM_2_check").css("borderColor","red");
+			           }else{
+			               $("#YZM_2").css("visibility","hidden");
+			               $("#YZM_2_check").css("borderColor","gray");
+			               $("#phone_checkRS").text("未知错误");
+			               $("#phone_checkRS").css("visibility","visible");
+			           }	 
+			         }
+	               }
+	            }else{       
+	                         $("#phone_checkRS").text("请输入合法手机号！");
+			                 $("#phone_checkRS").css("visibility","visible");
+			                 $("#YZM_2_check").css("borderColor","red");
+			     }   	                 	         	           	                    
+	        });
+	         
+   //--------------普通登录正则
+	        $("#usual_submit").click(function(){
+	          //检查账户是否为空
+	           var zhanghao=$("#zhanghao").val();
+	           var mima=$("#mima").val();
+	           if( zhanghao=='' ){
+	               $("#ZH_check").css("visibility","visible").text("请输入用户名");
+	               $("#YZM_1_check").parent().css("borderColor","red");
+	           }else{
+	               $("#ZH_check").css("visibility","hidden");
+	            //检查密码是否为空   
+		            if( mima=='' ){
+		               $("#MM_check").css("visibility","visible");
+		            }else{
+		               $("#MM_check").css("visibility","hidden");
+					    //验证验证码 
+			              var phoneRS= phoneNum.test(zhanghao);
+				          var addressRS= address.test(zhanghao);
+				          var usrnameRS= usrname.test(zhanghao);
+				          var mimaRS= usrname.test(mima);
+				          if( !(phoneRS||addressRS||usrnameRS) ){
+				                $("#ZH_check").css("visibility","visible").text("您输入的用户名和密码不匹配，请重新输入！");
+				                $("#YZM_1_check").parent().css("borderColor","red");
+				          }else{
+				                $("#ZH_check").css("visibility","hidden");
+				           //检查是否填入验证码	           
+				           var YZM_1_check=$("#YZM_1_check").val();
+				           if( !(YZM_1_check==='OqXF' || YZM_1_check==='EXL3' || YZM_1_check==='4gZb') ){
+				               $("#YZM_1").css("visibility","visible");
+				               $("#YZM_1_check").parent().css("borderColor","red");
+				           }else{
+				               $("#YZM_1").css("visibility","hidden");
+				               if( !mimaRS ){
+				                 $("#ZH_check").css("visibility","visible").text("您输入的用户名和密码不匹配，请重新输入！");  
+				               }else{
+				                 $("#ZH_check").css("visibility","hidden");
+				                 $("#YZM_1_check").parent().css("borderColor","#eee");
+				               }
+				           }
+				          }			             		            
+		            }    	               
+	           }	         		                  	                    
+	        });			      			        	        	                
+	   });	   
+	</script>
+  </head>
+
+  <body>
+   <div align="center">
+   
+<!-- 顶部logo -->
+	     <div class="head" align="left">
+	        <div class="logo"></div>
+	      </div>
+<!-- 中间部分 -->   	    
+	     <div class="loginbox" align="left">
+
+		       <div class="switch_btn" id="switchCodeLogin">
+		        <a class="a_one" style="top: 0px; left: 0px;"></a>	           
+	           </div>
+<!-------- 左边图片 ---------->	            
+		     <a href="main.html" target="_blank" style="z-index: 26;">
+	             <img src="loginImg/banner.jpg" width="620" height="350" alt="常住30天">
+	         </a>
+<!-------- 登陆信息 ---------->
+            <div class="logininfo" >            
+      <!-------- 扫码登陆模式 ---------->      
+               <div class="CodeLogin" align="center">
+	               <h5>请使用艺龙APP扫码登录</h5>
+	      <!-------- 使用帮助 显示的图片 ---------->         
+	               <div id="show_anima">
+	               <img src="loginImg/show_anima.png"/>
+	               </div>
+	               <div id="login_bgg">
+	               <img src="loginImg/login_bgg.png"/>               
+	               </div>	               	               
+	      <!-------- 二维码 ---------->         
+	               <div style="padding: 7px 8px 7px 6px;">
+	                 <img src="loginImg/qrCode.jpg" width="185" height="185"/>
+	               </div>
+	      <!-------- 使用帮助 ---------->       
+	               <div class="e_code_help" id="help">
+	                        <a class="mt10" href="javascript:;">使用帮助</a>
+	               </div>
+               </div>
+      <!-------- 文本登陆模式 ----------> 
+               
+               <div>
+                  
+                   <div class="textLogin">
+                       <div class="top_tip"> 港澳台手机用户请使用“手机动态密码登录”
+                       <span class="Img2"><img src="loginImg/2.jpg"/></span>
+                       <span class="arrow"></span>
+                       </div> 
+	                   
+	                   <div class="radio_switch">    
+	                      <label id="usual_login">
+	                         <input type="radio" name='login' checked="checked">
+	                         <span>普通登录</span>
+	                      </label>
+	                      <label style="margin-left: 40px;"  id="phone_login">
+	                         <input type="radio" name='login'><span>手机动态密码登录</span>                                                                    
+	                      </label>
+	                   </div> 	    
+	    <!-------- 普通登陆模式 ---------->                
+	                   <div class="userinfo_usual">
+	                      <div class="usual_outline">	                         
+		                     <input type="text" placeholder="用户名/卡号/手机号/邮箱" id="zhanghao">
+		                     <span><img src="loginImg/icon_user.png"/></span>
+                          </div>
+		                     <div class="input_tip" id="ZH_check">您输入的用户名和密码不匹配，请重新输入！</div>
+		                  <div class="usual_outline">	                         
+		                     <input type="password" placeholder="密码" id="mima">
+		                     <span><img src="loginImg/icon_password.png"/></span>
+                          </div>
+                             <div class="input_tip" name="accounterrortip" id="MM_check">请输入密码！</div>
+                          <div id="YZM_outline" class="last">
+                              <input type="text" placeholder="验证码"  id="YZM_1_check">                             
+                          </div>
+                          <img src="loginImg/getValidateCode1.jpg" />
+                          <a href="javascript:void(0); " class="changeImg" style="position: relative;top:-10px;">换一张</a>
+                          <div class="input_tip" id="YZM_1">您输入的验证码不正确！</div>
+                          <div align="left" class="last1">
+                          <a class="checkbox_prev"></a>
+                          <input type="checkbox" class="checkbox" checked="checked"><span>两个月内免费登录</span>
+                          <a href="https://secure.elong.com/passport/ForgetPass_cn.html?loginname=用户名/卡号/手机号/邮箱">忘记密码</a>                        
+                          </div> 
+                          <input type="submit" value="登录" id="usual_submit">
+                          <div class="lastfont">
+	                          <span>使用其它账号登录：</span>
+	                          <div class="lasticon" id="qq"></div>
+	                          <div class="lasticon" id="weibo"></div>
+	                          <div class="lasticon" id="zhifubao"></div>
+	                          <div class="lasticon" id="renren"></div>                          
+                          </div>                    
+	                   </div>  
+	      <!-------- 手机动态密码登陆模式 ----------> 
+	                  <div class="userinfo_phone"  style="display: none;">	                     	                     	                     	                     
+	                        <div class="phonenum" method="showPhoneTypes">
+	                            <span id="PhoneType" value="1" method="showPhoneTypes">中国大陆+86</span>
+	                             <ul id="PhoneTypeList" style="display: none;">
+		                               <li value="1" method="selectPhoneType">中国大陆(+86)</li>
+		                               <li value="2" method="selectPhoneType">中国香港(+852)</li>
+		                               <li value="3" method="selectPhoneType">中国澳门(+853)</li>
+		                               <li value="4" method="selectPhoneType">中国台湾(+886)</li>
+	                             </ul>
+	                        </div>
+	                      <div style="display: inline-block;width:100px;">	                         
+		                     <input type="text" placeholder="请输入手机号" id="phone_check" >		                     
+                          </div>
+		                     <div class="input_tip" id="phone_checkRS">请输入合法手机号！</div>
+		                  <div style="display: inline-block;">	                         
+		                     <input type="text" placeholder="请输入动态密码" id="DTMM">		                    
+                          </div>
+                          <div class="phone_pw">获取动态密码</div>
+                          <div class="input_tip" id="DTMM_check">请输入动态密码！</div>
+                          <div id="yanzhengma2" class="last">
+                              <input type="text" placeholder="验证码" width="139px" id="YZM_2_check">                             
+                          </div>
+	                      <img src="loginImg/getValidateCode1.jpg" />
+	                      <a href=" javascript:void(0); " style="position: relative;top:-10px;" class="changeImg">换一张</a>	                                           
+                          <div class="input_tip" id="YZM_2">您输入的验证码不正确！</div>
+                          <div align="left" class="last1">
+                          <a class="checkbox_prev"></a>
+                          <input type="checkbox" checked="checked" class="checkbox"><span>记住我</span>                        
+                          </div> 
+                          <input type="submit" value="登录" id="phone_submit">
+                          <div class="phone_tip">用户未绑定手机号？</div>
+	                      <div class="phone_tip_photo"><img src="loginImg/1.jpg"/></div>	                  
+	                  </div>	      	      	                
+                   </div>                             
+               </div>  
+            </div>
+	     </div> 
+<!-- 注册部分 --> 
+         <div align="right"  class="regis">
+         <a href="register.html" title="立即注册">立即注册<span></span></a>     
+         </div>
+<!-- 底部图标 -->
+         <div align="center"  style='width: 1000px;height: 30px;margin-top: 55px;'>
+             <div class="bot_icon">
+                <div id="iPhone"></div>
+                <span>iPhone / iPad</span>
+             </div>             
+             <div class="bot_icon" style="left:14px;top:1px;">
+                <div id="Android"></div>
+                <span style="top:-7px;">Android</span>
+             </div>
+             <div class="bot_icon" style="left:14px;">
+                <div id="Windows"></div>
+                <span>Windows</span>
+             </div>
+             <div class="bot_icon" style="left:20px;">
+                <div id="other"></div>
+                <span style="left:2px;">其他手机端</span>
+             </div>                           
+         </div>
+       
+<!--  最底部文字   -->   
+       <div align="center"  class="bot_text">
+	        <p>
+	        <a href="http://corp.elong.com/">酒店加盟</a>|
+	        <a href="http://hotel.elong.com/union/join.html#?">酒店加盟</a>|
+	        <a href="http://agent.elong.com/">代理合作</a>|
+	        <a href="http://corp.elong.com/advertising.html">广告服务</a>|
+	        <a href="http://corp.elong.com/contact.html">联系我们</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;©1999
+	        - 2014 eLong, Inc or its affiliates. All Rights Reserved.
+	        </p>	                  
+       </div>                           
+   </div>     
+  </body>
+</html>

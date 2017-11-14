@@ -1,0 +1,1214 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>main.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+<link rel="stylesheet" type="text/css" href="all_mid.css">
+<style type="text/css">
+/* 公共代码 */
+  *{padding: 0; margin: 0; border: 0;}
+  body{font-size:12px;font-family:arial,Verdana, Geneva, Helvetica;color:#555;
+       line-height:20px;-webkit-text-size-adjust:none;
+   }
+   a { text-decoration: none; color: #37e; }
+   a:HOVER { text-decoration: none; color: #f55; }
+   .mt20  {margin-top: 20px;}
+   .mt10  {margin-top: 10px;}
+   
+   
+/*---------- 头部开始部分----------- */   
+  #header .header_top{padding-top: 12px;min-width: 1000px;width: 1200px; height: 63px;} 
+ /* logo代码 */ 
+  #header .logo{ display:inline-block;width: 130px;height: 48px;
+			     float: left;margin-top: 2px;cursor: pointer;
+			     background: url(img/icon201706.png) -658px 0px no-repeat;			     
+   }  
+  /* logo右边的菜单代码 */  
+   .header_top .logoRight { float: right;width: 860px;height:42px;margin-top: 5px;}
+   .top_menu { width:  350px;height: 21px;float: left;  }
+   .top_menu span  { padding: 0 5px;height:20px; margin: 0 5px; display:inline-block; }
+   .top_menu a         { color: #999; }
+   .top_menu a:HOVER   { color: #f55; }
+   .top_menu b         {color:#c5c5c5; height:20px;}    
+   .top_menu span p {  position: absolute;width: 70px;height: 60px;
+                        border: 1px solid #c3c3c3;
+                        border-top: none;left: -1px;top: 20px;background: #fff;
+                        z-index: 1000; display: none;
+      }
+   /* English那个的所有样式 */
+   .top_menu  span p a { width:50px;float: left;border-top: 1px #cacaca dashed; margin: 0px 10px 0px 5px ;padding: 5px 0 3px 5px;}
+   .top_menu .language  { position: relative;border: 1px solid #fff;width: 60px;margin-top: -1px;}
+   .top_menu .language1 { border: 1px solid #cacaca;border-bottom: none; }            
+   .com_icon04{padding-top: 2px;position: relative;top:2px;left:1px;}
+   
+  /* logo最右边三个图片及文字 */
+   .minprogram { display:inline-block;width: 150px;height:42px;margin-left: 10px;cursor: pointer;position: relative;float: left; }
+   .com_icon  { float: left;width: 42px;height: 42px;display: inline-block;}
+   .com_icon1 { background: url(img/icon201706.png) -378px -769px;
+                width: 9px; height: 20px;float: right;position: relative;top:5px;
+     }
+   .min { background: url(img/icon201706.png) -127px -763px;  }
+   .phone1 { background: url(img/com_icon01.gif) no-repeat;  }
+   .phone2 { background: url(img/icon201706.png) -42px -762px; } 
+   
+   .minprogram em { float: left;color: #ff6a6a;font: 14px/18px Microsoft yahei;padding: 0 0 0 10px; }
+   .minprogram p  { width: 126px;height:20px;font: 16px Microsoft yahei;float: left; color: #2064c8;padding-left: 10px;}
+   .green  em {    color: #09bb07; }
+   .w180  { width:180px; }
+   .w180 em  { color:  #999; }
+   
+   .only_xcx .com_arrow_xcx {background: url(img/icon201706.png) -211px -2px;height: 9px;width: 18px;  }
+   .only_xcx  { box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);width: 210px;height: 92px;
+                position: absolute;top: 54px;left: 0px;padding: 10px; 
+                background: url(img/icon201706.png) no-repeat  #fff;}
+   .two  { background-position:-460px -48px  ;}
+   .none { display: none;z-index: 1000; }
+/*------------导航栏部分----------------- */     
+    .all_daohang  { background: #2064c8;height: 39px; }
+  /* 导航栏左边 */ 
+    .daohangall { width: 1200px;height: 39px; min-width: 1000px;position: relative;}
+    .daohangall ul li { list-style: none; height: 39px; font-size: 14px;border-right: 1px solid #3774ce; float: left;position: relative; padding: 0 12px;}
+    .daohangall ul li:HOVER { background-color: #0053ac; }
+    .daohangall ul li a {line-height:40px;color: #fff;font-size: 14px;text-decoration: none;  }
+    .daohangall ul li a:HOVER { }
+    .daohangall ul li a span.icon_min { background: url(img/icon201706.png) no-repeat;width: 21px;height: 20px;position: absolute;top:-10px;left:50px;display: inline-block;z-index: 10000; }
+    .daohangall ul li a span.icon_max { background: url(img/icon201706.png) no-repeat;width: 41px;height: 20px;position: absolute;top:-10px;left:50px;display: inline-block;z-index: 10000; }
+ /* 导航栏右边 */  
+    .daohangaR  {height: 39px; width: 120px;font-size: 14px;color: #fff;background: #003679;z-index: 1; float: right;}
+    .daohangaR span { padding:0 3px; }
+    .daohangaR  a { color: #fff;line-height: 40px; font-weight: bold;}
+    
+    .dis_div {display: none; position: absolute;width: 208px;top: 39px;right: 0px;box-shadow: 1px 1px 3px rgba(0, 0, 0, .3);border: 1px solid #c5c5c5;padding-top: 15px;z-index: 100;background-color: #fff;  }
+ /* 登录按钮 */    
+    .new_btnLogin a {background: #f80; display: block;width: 180px; height: 34px;
+                     line-height: 34px;text-align: center;font: 18px/34px Microsoft YaHei;
+                     color: #fff; text-decoration: none; border-radius: 3px;
+    }
+    .new_btnLogin a:HOVER {background-color: #f60;}
+ /* 登录按钮下方图标 */      
+    .minphoto  { width: 180px;height:200px; }
+    .everymin  { width: 60px;height:63px;float: left;cursor: pointer; }
+    .everymin div {width: 45px; height:45px;background: url(img/icon201706.png) no-repeat;}
+    .everymin span { height:18px;color: #999; }
+    .everymin .a1 { background-position: -153px -675px; }
+    .everymin:hover .a1 { background-position: 5px -675px; }
+    .everymin .a2 { background-position: -220px -675px;  }
+    .everymin:hover .a2 { background-position: -50px -675px; }    
+    .everymin .a3 { background-position: -157px  -618px;  }
+    .everymin:hover .a3 { background-position: 5px -618px; }   
+    .everymin .a4 { background-position: -220px -613px;  }
+    .everymin:hover .a4 { background-position: -52px -613px; }   
+    .everymin .a5 { background-position: -282px -618px;  }
+    .everymin:hover .a5 { background-position: -104px -618px; }    
+    .everymin .a6 { background-position: -155px -560px ;  }
+    .everymin:hover .a6 { background-position: 5px -560px; }   
+    .everymin .a7 { background-position: -282px -560px;  }
+    .everymin:hover .a7 { background-position: -102px -560px; }
+    .everymin .a8 { background-position: -282px -670px;  }
+    .everymin:hover .a8 { background-position: -102px -670px; }
+/*---------- 头部结束部分----------- */   
+
+/*---------- 脚部开始----------- */
+    .foot{width: 100%;padding: 20px 0;border-top: 1px solid #EEE; min-width: 1000px; margin-top: 20px;}
+   /*  脚部第一行文字和图片 */ 
+    .foot_info { width: 1000px;background-color: red;}  
+    .foot_info dl {float: left;width: 18%;padding-left: 2%;text-align: left;}
+    .foot_info dl dt {border-left: 3px solid #5D96C7;padding: 0 0 0 10px;height: 18px;
+                      font: 18px/1 Microsoft Yahei;margin-bottom: 10px;
+      }
+    .foot_info dl dd { padding-left: 14px; line-height: 24px; }
+    .foot_info dl dd a { color: #333;text-decoration: none; transition: margin 0.5s;}
+    .foot_info dl dd a:HOVER {margin-left: 10px;color: #F55;  }
+    .foot_info .iconinfo   {  padding-top: 10px;height: 100px;} 
+    .iconinfo i{ background:url(img/icon201706.png) no-repeat;height: 100px;width: 100px;display: inline-block; }
+    .foot_info_app {background-position: -259px -56px !important;}
+    .foot_info_wx  {background-position: -362px -58px !important;}
+    .foot_info_xcx {background-position: -155px -56px !important;}   
+   /*  脚部第二行文字 */ 
+   .foot_text { clear:left;position: relative;text-align: center;padding: 20px 0; }
+   .foot_text  a { color: #333; text-decoration: none; }
+   /*  脚部第三行图片 */
+   .foot_photo  { text-align: center; }
+   .foot_photo a {display: inline-block;height: 37px;line-height: 26px;
+                  text-align: center;margin: 0 5px;color: #666;text-decoration: none; 
+                  background:url(img/icon201706.png) no-repeat;
+                  text-indent: -9999em;position: relative;top: 0;
+                 -webkit-transition: top 0.5s; transition: top 0.5s;
+     }
+   .foot_photo a:HOVER{ top:-5px; }
+    .w80 { width: 80px; }
+    .w60 { width: 60px; }
+    .w92 { width: 92px; }
+    .w83 { width: 83px; } 
+    .foot_photo a.pt_1 { background-position: -329px -436px; }
+    .foot_photo a.pt_2 { background-position: -331px -482px; }
+    .foot_photo a.pt_3 { background-position: -473px -436px; }
+    .foot_photo a.pt_4 { background-position: -565px -436px; }
+    .foot_photo a.pt_5 { background-position: -657px -436px; }
+    .foot_photo a.pt_6 { background-position: -393px -477px; }
+  /*  最下方菜单 */
+    .bottom_nav  { background: #7c8fa2;height: 40px;line-height: 40px;min-width: 1000px; }
+    .bottom_nav ul  {  width: 1000px; margin: 0 auto; overflow: hidden;list-style: none;}
+    .bottom_nav ul li { float: left;text-align: center;cursor: pointer;}
+    .bottom_nav ul li:hover  { background: #8da1b5; }
+    .bottom_nav ul li a { display: block;width: 166px;height: 40px; color: #fff; text-decoration: none; }
+    .bottom_nav ul li.action { background: #c0d2e4; }
+    .bottom_nav ul li.action a { color: #555; }
+  /* 最下方菜单点击显示的文字部分 */
+    .bottom_text  {    padding: 20px;background: #f0f0f0;width: 960px; margin: 0 auto;display: none;}
+    .bottom_text h2 {font: 16px "Microsoft Yahei",Simsun;font-weight: 700;color: #555;}
+    .bottom_text p {    line-height: 22px; }
+    .bottom_text a  { color: #555;text-decoration: none; }
+    .bottom_text a:hover  { text-decoration:underline; }
+    .bottom_text .pad5{ padding: 0px 5px; }
+
+</style>
+<script type="text/javascript" src='jquery-1.6.4.min.js'></script>
+<script type="text/javascript" src='all_mid.js'></script>
+<script type="text/javascript">
+    
+    $(function(){
+      //  语言切换按钮
+	    $(".language").hover(function(){
+	          $(".language p").show();
+	          $(this).addClass("language1");         
+	    },function(){
+	          $(".language p").hide();
+	          $(this).removeClass("language1");   
+	    });
+	  //  图片切换按钮  
+	    $(".minprogram").hover(function(){
+	          $(this).children("div").toggle();
+        
+	    });
+	  //  打开登录页面   
+	    $(".everymin").click(function(){
+	       location.href = "login.html";
+	    });
+	  //  更改导航栏隐藏显示部分  
+	    $(".daohangaR,.dis_div").hover(function(){
+	         $(".dis_div").toggle();
+	    });	    
+	  //更改最底部菜单显示隐藏
+	    $(".bottom_nav li a").click(function(){
+	       //给选中的添加action 其他取消
+	       $(this).parent().addClass("action").siblings().removeClass();
+	       //更改下面的显示内容
+	       $("#"+$(this).attr("name")).show().siblings().hide();
+	    });
+	    
+    });
+ 
+</script>
+
+  </head>
+  
+  <body>
+    <div id="header" class="header" align="center">
+<!---------------------------------顶部开始--------------------------->     
+        <div class="header_top" align="left">
+  <!--------导航栏 和注册登录-------- -->             
+            <div class="logo">
+            <a href="http://www.elong.com" title="艺龙旅行网"></a>
+            </div>
+   <!---logo右边--->          
+            <div class="logoRight">
+                <div class="top_menu">
+	                 <span>
+	                    <a href="http://imall.elong.com/">积分商城</a>
+	                 </span>
+	                 <b>|</b>
+	                 <span>
+	                    <a href="http://imall.elong.com/">礼品卡</a>
+	                 </span>
+	                 <b>|</b>
+	                 <span>
+	                    <a href="http://imall.elong.com/">在线客服</a>
+	                 </span>
+	                 <b>|</b>
+	                 <span class="language">
+		                 <a href="http://imall.elong.com/">English</a>
+		                 <i class="com_icon04"><img src="img/com_icon04.jpg"/></i>
+		                 <p>
+			                 <a href="http://hotel.elong.com/trans2cn/?target=http://hotel.elong.com" title="简体版" rel="nofollow">简体版</a> 
+			                 <a href="http://hotel.elong.com/trans2tw/?target=http://hotel.elong.com" rel="nofollow" title="繁體版">繁体版</a>
+			             </p>   
+		             </span> 	                 
+                </div>  
+     <!---logo最右边三个图标--->                                            
+	            <div class="minprogram green" > 
+			        <i class="com_icon min"></i> 
+			        <em>小程序</em>  
+			        <em>体验更轻盈</em>
+			        <div class="none" style="position: relative;">  
+			             <img src="img/111.jpg"/>  
+			        </div>		            	             
+               </div>
+               <a href="http://promotion.elong.com/index/cn/2016/elong_app_down/index.html" target="_blank">
+	               <div class="minprogram"> 		               
+					        <i class="com_icon phone1"></i> 
+					        <em>手机版</em>  
+					        <em>专享五折起</em>
+					        <div class="only_xcx two none">  
+					                <i class="com_arrow_xcx"></i>  
+					        </div>				   	            	             
+	               </div> 
+               </a>	
+               <div class="minprogram w180" > 
+			        <i class="com_icon phone2"></i> 
+			        <em>7×24 客服电话</em>  
+			        <p>
+			           <i class="com_icon1"></i>
+			           4009-333-333
+			        </p>
+			        <div class="none" style="position: relative;">  
+			               <img src="img/333333.jpg"/>   
+			        </div>		            	             
+               </div>                       
+            </div>                                     
+        </div>
+<!--------导航栏 和注册登录----------> 
+        <div class="all_daohang">
+         <div class="daohangall">
+           <ul>
+             <li>
+               <a href="http://www.elong.com" title="艺龙旅行网">首页</a>
+             </li>
+             <li>
+               <a title="酒店预订" href="http://hotel.elong.com/">国内酒店</a>
+             </li>
+             <li>
+	              <a href="http://ihotel.elong.com/" title="国际酒店">国际酒店
+	              <span class="icon_min" style="background-position: -510px 0;"></span>
+	              </a>
+             </li>
+             <li>
+	              <a href="http://jia.elong.com/" title="短租公寓">短租公寓</a>
+             </li>
+             <li>
+                  <a href="http://flight.elong.com/" title="机票">机票
+	              <span class="icon_max" style="background-position: -588px 0;"></span>
+	              </a>
+             </li>
+             <li>
+                  <a href="http://train.elong.com/" title="火车票">火车票</a>             
+             </li>
+             <li>
+                  <a href="http://bus.elong.com/" title="汽车票">汽车票
+	              <span class="icon_max" style=" background-position: -370px 0;"></span>
+	              </a>
+             
+             </li>
+             <li>
+                  <a href="http://bus.elong.com/" title="旅游指南">旅游指南
+	              </a>                        
+             </li>           
+           </ul>
+           <div class="daohangaR" id="user_display_login"> 
+           <span><a href="login.html">登录</a></span>|
+           <span><a href="register.html">注册</a></span> 
+           </div>
+           
+           <div class="dis_div"> 
+                <div class="new_btnLogin"> <a href="login.html">登录</a></div> 
+                <div class="minphoto" >
+	                  <div class="everymin">
+	                     <div class="a1"></div>
+	                     <span>酒店订单</span>
+	                  </div>
+	                  <div class="everymin">
+	                     <div class="a2"></div>
+	                     <span>机票订单</span>
+	                  </div>	                  
+	                  <div class="everymin">
+	                     <div class="a3"></div>
+	                     <span>火车票订单</span>
+	                  </div>	                  
+	                  <div class="everymin">
+	                     <div class="a4"></div>
+	                     <span>现金账户</span>
+	                  </div>	                  
+	                  <div class="everymin">
+	                     <div class="a5"></div>
+	                     <span>汽车票订单</span>
+	                  </div>	                  
+	                  <div class="everymin">
+	                     <div class="a6"></div>
+	                     <span>酒店收藏</span>
+	                  </div>	                  
+	                  <div class="everymin">
+	                     <div class="a7"></div>
+	                     <span>我的点评</span>
+	                  </div>	                  
+	                  <div class="everymin">
+	                     <div class="a8"></div>
+	                     <span>个人设置</span>
+	                  </div>               
+                </div>
+           </div>
+         </div>
+        </div>
+    </div>   
+<!-----------------------------头部内容结束------------------------------> 
+
+
+<!------------- 轮播图和选项卡开始------------------>  
+	<div class="thisis_tab">
+	   <div class="lunbotu">
+	      <ul>
+	        <li style="display: block;"><i style="background-image: url('img/images149370993339413.jpg')"></i></li>
+	        <li><i style="background-image: url('img/images149371001863360.jpg');"></i></li>
+	        <li><i style="background-image: url('img/images149371011284238.jpg');"></i></li>
+	        <li><i style="background-image: url('img/images150293611029343.jpg');"></i></li>
+	        <li><i style="background-image: url('img/images150296846462587.jpg');"></i></li>
+	        <li><i style="background-image: url('img/images150296872432368.jpg');"></i></li>
+	        <li><i style="background-image: url('img/images150337369110870.jpg');"></i></li>      
+	      </ul>
+	      <ol class="dots">
+	        <li class="dot active"></li>
+	        <li class="dot"></li>
+	        <li class="dot"></li>
+	        <li class="dot"></li>
+	        <li class="dot"></li>
+	        <li class="dot"></li>
+	        <li class="dot"></li>	        	      
+	      </ol>
+	   </div>
+	   <div class="xuanxiangka" align="center">
+	        <div class="xuanxuangka_l" align="left">
+		         <div class="thisis_info">
+		              <ul class="it_ul">
+			                <li class="xuanxiang">
+			                  <span>
+			                     <i class="ei_icon icon01 icon11"></i>
+			                     <a href="#">酒店</a>
+			                  </span>
+			                </li>
+			                <li>
+			                   <span>
+			                     <i class="ei_icon icon02 icon12"></i>
+	                             <a href="#">机票</a>
+			                   </span>
+			                </li>
+			                <li>
+			                   <span>
+			                     <i class="ei_icon icon03 icon13"></i>
+			                     <a href="#">火车票</a>
+			                   </span>
+			                </li>
+			                <li style="border-bottom-color: #f3f3f3;">
+			                   <span>
+			                     <i class="ei_icon icon04 icon14"></i>
+			                     <a href="#">手机版</a>
+			                   </span>
+			                </li>
+			                <li class="emty"></li>
+		              </ul>
+		              
+		              <div class="cate">
+                               <!-- 酒店  -->
+                               <div class="hotel choose_self" align="center" style="display: block;">
+                                    <div class="hotel_span hotel_ch_two" align="left">
+                                         <span class="neiwai">国内酒店</span>
+                                         <span>国际酒店</span>
+                                    </div>
+                                    <div class="country_hotel" align="right">
+                                         <div class="main_input_text aim_address_change">目的地&nbsp;&nbsp; <input type="text" value="北京"></div>
+                                         <div class="main_input_text_2 time_change">入住&nbsp;&nbsp;<input type="text" value="2017-08-29">&nbsp;&nbsp;&nbsp;退房&nbsp;&nbsp;<input type="text" value="2017-08-30"></div>
+                                         <div class="main_input_text main_change">关键词&nbsp;&nbsp; <input type="text" value="如酒店\酒店名\品牌"></div></div>
+                                    <div align="left" style="width: 300px;">
+                                         <button class="search">&nbsp;&nbsp;搜索</button>
+                                         <button class="add_search">&nbsp;&nbsp;地图搜索</button>
+                                    </div>
+                              </div>		              
+                              <!-- 机票 -->
+                              <div class="plane_ticket choose_self" align="center">
+                                    <div class="hotel_span plane_ch_two" align="left">
+                                         <span class="neiwai">国内机票</span>
+                                         <span>国际机票</span>
+                                    </div>
+                                    <div class="ticket_back" align="left">
+                                          <div class="tic_child_div">航程类型&nbsp;&nbsp;<input type="radio" name="oneorback" checked="checked">&nbsp;单程&nbsp;&nbsp;&nbsp; <input type="radio" name="oneorback">&nbsp;往返</div>
+                                          <div class="tic_child_div back_city">往返城市&nbsp;&nbsp;<input type="text" value="北京"><span class="go_back_icon"></span><input type="text" value="上海"></div>
+                                          <div class="tic_child_div indent_go">去程&nbsp;<input type="text" value="2017-08-29"><span>返程</span><input type="text" value="yyyy-mm-dd"></div></div>
+                                    <div><button class="search">&nbsp;&nbsp;搜索</button></div>
+                              </div> 
+                              <!-- 火车票 -->
+                               <div class="train_ticket choose_self" align="left">
+                                   <div class="go_back_city train_child_div">往返城市 <input type="text" value="北京"><span> </span><input type="text" value="上海"></div>
+                                   <div class="train_child_div">出发日期 <input type="text" value="2017-08-31">&nbsp;<input type="checkbox"> <a>只看动车/高铁</a> &nbsp;<input type="checkbox"> <a>只看有票</a></div>
+                                   <div class="train_child_div" style="text-indent: 63px;"><button class="search"> 搜索</button></div>
+                                   <div>热门路线：北京<span class="only_go"></span>西安   上海<span class="only_go"></span>南京  深圳<span class="only_go"></span>厦门   广州<span class="only_go"></span>上海</div>
+                               </div>		              
+                               <!-- 手机版 --> 
+                               <div class="phone_Edition choose_self">
+                                    <img src="img/mobile_bg.png" />
+                               </div> 		              
+		              </div>  
+		         </div>	        
+	        </div>
+       </div>	    
+	</div>
+<!------------- 轮播图和选项卡结束------------------> 
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+<!---------------- 切图部分开始---------------->
+  <!-- 登录显示个性内容 -->
+		<div class="mt20" align="center">
+			<div class="loginshow" align="left">
+				<div class="needlogin">
+					<i class="aixin"></i>
+					<a href="https://secure.elong.com/passport/login_cn.html">登录</a>
+					<em>展示你的个性化内容</em>
+				</div>
+			</div>
+		</div>
+  <!-- 详情切图 -->
+        <div class="p20clear" align="center">
+           <div class="xiangqing">
+              <ul>
+                 <li>
+                       <div class="H_text">
+                           <h4>园林酒店</h4>
+                       </div>
+					   <div class="pic_auto pic_auto1"></div>
+				 </li>
+				 
+                 <li>
+                       <div class="H_text">
+                           <h4>情侣酒店</h4>
+                       </div>
+					   <div class="pic_auto pic_auto2"></div>
+				 </li>
+				 
+				 <li>
+                       <div class="H_text">
+                           <h4>设计师酒店</h4>
+                       </div>
+					   <div class="pic_auto pic_auto3"></div>
+				 </li>
+				 
+				 <li>
+                       <div class="H_text">
+                           <h4>青年旅舍</h4>
+                       </div>
+					   <div class="pic_auto pic_auto4"></div>
+				 </li>
+				 
+				 <li>
+                       <div class="H_text">
+                           <h4>特色客栈</h4>
+                       </div>
+					   <div class="pic_auto pic_auto5"></div>
+				 </li>
+				 
+				 <li>
+                       <div class="H_text">
+                           <h4>海岛酒店</h4>
+                       </div>
+					   <div class="pic_auto pic_auto6"></div>
+				 </li>
+				 
+				 <li>
+                       <div class="H_text">
+                           <h4>海外温泉</h4>
+                       </div>
+					   <div class="pic_auto pic_auto7"></div>
+				 </li>
+			
+				 
+				 
+          
+              </ul>
+             
+             
+           
+           </div>        
+        </div>
+<!---------------- 切图部分结束---------------->    
+
+<!-----------------------目的地指数开始  -------------------------------->  
+    <div class="purpose" align="center">
+    <!------目的地指数上面部分  ------>
+        <div class="pp_top" align="left">
+           <a>目的地指数 </a>
+           <span>覆盖全球75万家酒店，你想住的，我们都有</span>
+        </div>
+<!-- 国内 -->       
+<!------目的地指数标题部分  ------>    
+        <div class="pp_title" align="left">
+           <a href="#">
+             <div class="guonei"></div>
+             <em>国内</em>
+           </a>
+           <span class="on1">登高踏青</span>
+           <span>小憩温泉</span>
+           <span>天然氧吧</span>
+           <span>草原撒欢</span>
+           <span>小镇时光</span>
+           <span>美食之城</span>
+           <i>
+               <a href="http://hotel.elong.com/">更多<b>&gt;&gt;</b></a>
+           </i>
+        </div>
+   <!------目的地指数图片部分  ------>     
+        <div  class="pp_bottom">
+           <ul>
+              <li>
+	              <a href="#" target="_blank">
+		              <div class="pic_info">
+		                <img alt="黄山" src="img/dgtq-hs.jpg">
+		              </div>
+		              <div class="city_name">黄山</div>
+	              </a> 
+	              <div class="introduce">
+	                  <p>春意撩人 登高踏青赏春色</p>
+	              </div>        
+              </li>
+              <li>
+	              <a href="#" target="_blank">
+		              <div class="pic_info">
+		                <img alt="峨眉山" src="img/dgtq-ems.jpg">
+		              </div>
+		              <div class="city_name">峨眉山</div>
+	              </a> 
+	              <div class="introduce">
+	                  <p>阳春三月 闻着茶香去峨眉</p>
+	              </div>        
+              </li>
+              <li>
+	              <a href="#" target="_blank">
+		              <div class="pic_info">
+		                <img alt="五台山" src="img/dgtq-wts.jpg">
+		              </div>
+		              <div class="city_name">五台山</div>
+	              </a> 
+	              <div class="introduce">
+	                  <p>迎春 祈福 登五台</p>
+	              </div>        
+              </li>
+              <li style="margin-right: 0px;">
+                  <a href="#" target="_blank">
+		              <div class="pic_info">
+		                <img alt="庐山" src="img/dgtq-ls.jpg">
+		              </div>
+		              <div class="city_name">庐山</div>
+	              </a> 
+	              <div class="introduce">
+	                  <p>亲近自然 春游庐山</p>
+	              </div>             
+              </li>
+           </ul>     
+        </div>
+<!-- 海外 -->        
+<!------目的地指数图片部分  ------>    
+        <div class="pp_title mt20" align="left">
+           <a href="#">
+             <div class="haiwai"></div>
+             <em>海外</em>
+           </a>
+           
+           <span class="on1">文艺清新</span>
+           <span>面朝大海</span>
+           <span>别样建筑</span>
+           <span>浪漫主义</span>
+           <span>魅力都市</span>
+           <i>
+               <a href="http://hotel.elong.com/">更多<b>&gt;&gt;</b></a>
+           </i>
+        </div>
+   <!------目的地指数图片部分  ------>     
+        <div  class="pp_bottom">
+           <ul>
+              <li>
+	              <a href="#" target="_blank">
+		              <div class="pic_info">
+		                <img alt="伦敦" src="img/termini_it1_ld.jpg">
+		              </div>
+		              <div class="city_name">伦敦</div>
+	              </a> 
+	              <div class="introduce">
+	                  <p>风情英伦，帝国余韵</p>
+	              </div>        
+              </li>
+              <li>
+	              <a href="#" target="_blank">
+		              <div class="pic_info">
+		                <img alt="清迈" src="img/termini_it1_qm.jpg">
+		              </div>
+		              <div class="city_name">清迈</div>
+	              </a> 
+	              <div class="introduce">
+	                  <p>泰北玫瑰，慢行古城</p>
+	              </div>        
+              </li>
+              <li>
+	              <a href="#" target="_blank">
+		              <div class="pic_info">
+		                <img alt="济州岛" src="img/termini_it1_jzd.jpg">
+		              </div>
+		              <div class="city_name">济州岛</div>
+	              </a> 
+	              <div class="introduce">
+	                  <p>最传统的浪漫，最神秘的自然</p>
+	              </div>        
+              </li>
+              <li style="margin-right: 0px;">
+                  <a href="#" target="_blank">
+		              <div class="pic_info">
+		                <img alt="罗马" src="img/termini_it1_lm.jpg">
+		              </div>
+		              <div class="city_name">罗马</div>
+	              </a> 
+	              <div class="introduce">
+	                  <p>永恒之城，魅力无限</p>
+	              </div>             
+              </li>
+           </ul>     
+        </div>
+    
+    </div>
+<!----------------------------目的地指数结束  -------------------------->     
+
+<!--------------------特价票开始----------------------------->
+     <div class="bargain mt20" align="center">
+          <div class="bargain_top" align="left">
+             <h2>
+			    <a>超值特价票</a>
+			 </h2>   
+          </div>
+   <!-- 机票 -->
+          <div class="mt10">
+	          <div class="bg_title" align="left">
+		           <a href="#">
+		             <div class="jipiao"></div>
+		             <em>机票</em>
+		           </a>       
+		           <span class="on2">北京出发</span>
+		           <span>上海出发</span>
+		           <span>广州出发</span>
+		           <span>杭州出发</span>
+		           <span>深圳出发</span>
+		           <span>成都出发</span>
+		           <i>
+		               <a href="http://hotel.elong.com/">更多<b>&gt;&gt;</b></a>
+		           </i>
+	          </div> 
+	          <div class="bg_bottom">
+	             <ul>
+	                <li>
+	                   <span>
+	                       <b class="a_city">北京</b>
+	                       <i class="airphoto"></i>
+	                       <b>烟台</b>
+	                   </span>
+	                   <span>
+	                       <b>09月06日</b>
+	                       <i class="cut_price">2.6折</i>
+	                       <b class="a_price">￥180</b>
+	                   </span>
+	                </li>
+	                <li>
+	                   <span>
+	                       <b class="a_city">北京</b>
+	                       <i class="airphoto"></i>
+	                       <b>太原</b>
+	                   </span>
+	                   <span>
+	                       <b>09月10日</b>
+	                       <i class="cut_price">1.8折</i>
+	                       <b class="a_price">￥200</b>
+	                   </span>
+	                </li>
+	                <li>
+	                   <span>
+	                       <b class="a_city">北京</b>
+	                       <i class="airphoto"></i>
+	                       <b>大连</b>
+	                   </span>
+	                   <span>
+	                       <b>09月20日</b>
+	                       <i class="cut_price">2.5折</i>
+	                       <b class="a_price">￥220</b>
+	                   </span>
+	                </li>
+	                <li>
+	                   <span>
+	                       <b class="a_city">北京</b>
+	                       <i class="airphoto"></i>
+	                       <b>青岛</b>
+	                   </span>
+	                   <span>
+	                       <b>09月30日</b>
+	                       <i class="cut_price">1.6折</i>
+	                       <b class="a_price">￥240</b>
+	                   </span>
+	                </li>
+	                <li>
+	                   <span>
+	                       <b class="a_city">北京</b>
+	                       <i class="airphoto"></i>
+	                       <b>南京</b>
+	                   </span>
+	                   <span>
+	                       <b>09月05日</b>
+	                       <i class="cut_price">1.6折</i>
+	                       <b class="a_price">￥300</b>
+	                   </span>
+	                </li>
+	                <li>
+	                   <span>
+	                       <b class="a_city">北京</b>
+	                       <i class="airphoto"></i>
+	                       <b>包头</b>
+	                   </span>
+	                   <span>
+	                       <b>09月16日</b>
+	                       <i class="cut_price">3.9折</i>
+	                       <b class="a_price">￥320</b>
+	                   </span>
+	                </li>
+	             
+	             </ul>
+	          
+	          </div>    
+          </div>
+   <!-- 火车票 -->       
+          <div class="mt20">
+	          <div class="bg_title" align="left">
+		           <a href="#">
+		             <div class="huochepiao"></div>
+		             <em>火车票</em>
+		           </a>       
+		           <span class="on2">北京出发</span>
+		           <span>上海出发</span>
+		           <span>广州出发</span>
+		           <span>深圳出发</span>
+		           <span>天津出发</span>
+		           <span>厦门出发</span>
+		           <i>
+		               <a href="http://hotel.elong.com/">更多<b>&gt;&gt;</b></a>
+		           </i>
+	          </div> 
+	          <div class="bg_bottom">
+	             <ul>
+	                <li>
+	                   <span>
+	                       <b class="a_city">北京</b>
+	                       <i class="train"></i>
+	                       <b>上海</b>
+	                   </span>
+	                   <span>
+	                       <b>09月09日</b>
+	                       <i class="cut_price hid">2.6折</i>
+	                       <b class="a_price">￥156.5</b>
+	                   </span>
+	                </li>
+	                <li>
+	                   <span>
+	                       <b class="a_city">北京</b>
+	                       <i class="train"></i>
+	                       <b>太原</b>
+	                   </span>
+	                   <span>
+	                       <b>09月03日</b>
+	                       <i class="cut_price hid">1.8折</i>
+	                       <b class="a_price">￥246</b>
+	                   </span>
+	                </li>
+	                <li>
+	                   <span>
+	                       <b class="a_city">北京</b>
+	                       <i class="train"></i>
+	                       <b>合肥</b>
+	                   </span>
+	                   <span>
+	                       <b>09月14日</b>
+	                       <i class="cut_price hid">2.5折</i>
+	                       <b class="a_price">￥230.5</b>
+	                   </span>
+	                </li>
+	                <li>
+	                   <span>
+	                       <b class="a_city">北京</b>
+	                       <i class="train"></i>
+	                       <b>杭州</b>
+	                   </span>
+	                   <span>
+	                       <b>09月14日</b>
+	                       <i class="cut_price hid">1.6折</i>
+	                       <b class="a_price">￥111.5</b>
+	                   </span>
+	                </li>
+	                <li>
+	                   <span>
+	                       <b class="a_city">北京</b>
+	                       <i class="train"></i>
+	                       <b>郑州</b>
+	                   </span>
+	                   <span>
+	                       <b>09月20日</b>
+	                       <i class="cut_price hid">1.6折</i>
+	                       <b class="a_price">￥300</b>
+	                   </span>
+	                </li>
+	                <li>
+	                   <span>
+	                       <b class="a_city">北京</b>
+	                       <i class="train"></i>
+	                       <b>杭州</b>
+	                   </span>
+	                   <span>
+	                       <b>09月16日</b>
+	                       <i class="cut_price hid">3.9折</i>
+	                       <b class="a_price">￥320</b>
+	                   </span>
+	                </li>
+	             
+	             </ul>
+	          
+	          </div>    
+          </div>
+          
+     </div>
+<!--------------------特价票结束----------------------------->
+
+<!----------------旅游指南开始--------------------->
+    <div class="tra_guide mt20" align="center">
+	         <div class="tra_guide_top" align="left">             
+	             <h2>
+				    <a>旅游指南</a>
+				 </h2>                     
+	         </div>
+	         <div class="tra_guide_bot mt10">
+             <div class="oneone">
+                 <div class="one_left">
+                     <div class="one_0">
+                       <a href="#" index="1" class="changethis">小朋友超爱的三亚酒店</a>
+                       <span style="display: block;"></span>
+                     </div>
+                     <div class="one_0">
+                       <a href="#" index="2">七条航线带你“邮”世界</a>
+                       <span></span>
+                     </div>
+                     <div class="one_0">
+                       <a href="#" index="3">盘点国内52处世界遗产</a>
+                       <span></span>
+                     </div>
+                     <div class="one_0">
+                       <a href="#" index="4">青岛七星级酒店住一晚</a>
+                       <span></span>
+                     </div>
+                 </div>
+                 <div class="one_right">
+                     <img src="img/z1.jpg"/>
+                 </div>
+             </div>          
+             <div class="twotwo">
+             <ul>
+                <li style="padding-right: 10px;">
+	              <a href="#" target="_blank">
+		                <img src="img/17080254.jpg" width="293px" height="180px">           
+	              </a> 
+	              <div class="other">
+	                  <p><a href="#">探秘海岛，赵薇在象岛开的中餐厅</a></p>
+	              </div>        
+                </li>
+                <li>
+	              <a href="#" target="_blank">
+		                <img src="img/17030505.jpg" width="293px" height="180px">          
+	              </a> 
+	              <div class="other">
+	                  <p><a href="#">毛里求斯，海誓山盟</a></p>
+	              </div>        
+                 </li>             
+             </ul>             
+             </div>         
+         </div>
+    </div>
+<!----------------邮箱开始--------------------->
+    <div class="server mt20" align="center">
+       <div class="server_top">
+         <ul>
+            <li>
+              <i class="quan"></i>
+              <span>全球75万家酒店</span>
+            </li>
+            <li>
+              <i class="ding"></i>
+              <span>订酒店返现金高达20%</span>
+            </li>
+            <li>
+              <i class="guo"></i>
+              <span>国际酒店8折起</span>
+            </li>
+            <li>
+              <i class="xiao"></i>
+              <span>7×24小时服务</span>
+            </li>
+         
+         </ul>
+       
+       </div>
+       <div class="server_bot">
+          <div class="server_agr">
+                 <a href="#">艺龙服务协议</a>
+          </div>
+          <div class="server_pic"></div>
+          <div class="input_email">
+              <span>亲，留下您的邮箱，会有惊喜呦~</span>
+              <input type="text" placeholder="请输入您的E-mail" id="email">
+              <input type="button" value="立即订阅" id="btnSubEmail">
+          </div>
+       
+       
+       
+       </div>
+    </div>
+<!----------------邮箱结束--------------------->   
+    
+<!-----------------------------脚部部分开始------------------------------>
+    <div class="foot" align="center">
+            <div class="foot_info">
+	            <dl>
+					<dt>
+						加盟合作
+					</dt>
+					<dd>
+						<a href="http://hotel.elong.com/union/join.html#?" title="酒店加盟">酒店加盟</a>
+					</dd>
+					<dd>
+						<a href="http://open.elong.com/" title="机票酒店分销联盟" rel="nofollow">开放平台</a>
+					</dd>
+					<dd>
+						<a
+							href="http://promotion.elong.com/hotel/cn/elongagent/elongagent.html" title="旅游产品代理合作">代理合作</a>
+					</dd>
+					<dd>
+						<a href="http://promotion.elong.com/web/adservice/adservice.html" title="在线广告服务">广告服务</a>
+					</dd>
+					<dd>
+						<a href="http://ebooking.elong.com/ebkauth/login" title="艺龙商家中心">商家中心</a>
+					</dd>
+				</dl>
+				<dl>
+				    <dt>关于艺龙</dt>
+					<dd>
+						<a href="http://hotel.elong.com/directory/" title="酒店大全">酒店大全</a>
+					</dd>
+					<dd>
+						<a href="http://ihotel.elong.com/sitemap/" title="国际酒店">国际酒店</a>
+					</dd>
+					<dd>
+						<a href="http://promotion.elong.com/index/cn/campus/index.html" title="校园招聘">校园招聘</a>
+					</dd>
+					<dd>
+						<a href="http://promotion.elong.com/web/contact/contact.html" title="联系艺龙旅行网">联系我们</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>艺龙APP下载</dt>
+					<dd class="iconinfo">
+						<i class="foot_info_app"></i>
+					</dd>
+				</dl>
+				<dl>
+					<dt>艺龙官方微信</dt>
+					<dd class="iconinfo">
+						<i class="foot_info_wx"></i>
+					</dd>
+				</dl>
+				<dl>
+					<dt>艺龙官方小程序</dt>
+					<dd class="iconinfo">
+						<i class="foot_info_xcx"></i>
+					</dd>
+				</dl>
+
+			</div>
+            <div class="foot_text">
+	             © 1999 - 2017 艺龙网信息技术（北京）有限公司, eLong, Inc or its affiliates. All Rights Reserved. 
+	            <a href="#">京ICP证010011号</a>
+	                                   京公网安备
+	            <a href="#">11010502026059号</a>
+            </div>
+            <div class="foot_photo">
+             <a class="w80 pt_1" href="https://seal.verisign.com/splash?form_file=fdf/splash.fdf&amp;dn=SECURE.ELONG.COM&amp;lang=zh_cn" target="_blank" alt="SSL加密认证" title="SSL加密认证">SSL加密认证</a>
+             <a class="w60 pt_2" href="http://www.atsec.cn/cn/pci-attestation/Elong-PCIAttestation-atsec-PCI-DSS-C-01128.jpg" target="_blank" title="艺龙网通过PCI认证" alt="艺龙网通过PCI认证">艺龙网通过PCI认证</a>
+             <a class="w92 pt_3" href="http://www.itrust.org.cn/yz/pjwx.asp?wm=1802034050" target="_blank" alt="信赖商业计划" title="信赖商业计划">信用评级</a>
+             <a class="w92 pt_4" href="https://ss.knet.cn/verifyseal.dll?sn=e14021111010646180fggu000000&amp;ct=df&amp;a=1&amp;pa=500267"_target="_blank" title="可信用网站身份验证" alt="可信用网站身份验证">可信用网站身份验证</a>
+             <a class="w92 pt_5" href="http://search.szfw.org/cert/l/CX20120918001652001722" target="_blank" title="诚信示范企业" alt="诚信示范企业">诚信示范企业</a>
+             <a class="w83 pt_6" href="http://si.trustutn.org/info?sn=912170105026585086807&amp;certType=1" target="_blank"alt="品牌官网认证" title="品牌官网认证">品牌官网认证</a>
+            </div>
+   </div>
+<!-----------------------------脚部部分结束------------------------------>
+<!-- 最下方菜单 -->
+	<div class="bottom_nav">
+		 <ul>
+		  <li class="action"><a name="bottom_hotel">酒店预订</a></li>
+		  <li><a name="bottom_flight">机票查询</a></li>
+		  <li><a name="bottom_groupon">酒店团购</a></li>
+		  <li><a name="bottom_city">热门城市</a></li>
+		  <li><a name="bottom_partner">合作伙伴</a></li>
+		  <li><a name="bottom_event">常见酒店</a></li>
+		 </ul>
+	</div>
+    <div>
+    <div class="bottom_text" id="bottom_hotel">
+		 <h2>酒店预订</h2>
+		 <p>艺龙旅行网提供全球50万家酒店的预订服务和酒店团购服务。通过真实的酒店照片、酒店评价，无论您是和家人一起旅游度假还是商务出行，我们都能为您提供称心如意的酒店。</p>
+		 <h2><a style="color: rgb(85, 85, 85);" href="http://hotel.elong.com/poi/">艺龙酒店地标大全</a></h2>
+		 <p>为了方便用户快速定位酒店而存在，我们涵盖了北京、西安、上海、成都、广州、武汉、南京、东莞、长沙、深圳、重庆等城市的常见地标类型。</p>
+    </div>
+    <div class="bottom_text" id="bottom_flight">
+         <h2>机票查询</h2>
+         <p>艺龙旅行网是中航协认证的机票服务提供商，提供国内和国际的特价机票、航班信息、机票查询和预订服务。</p>
+    </div>
+    <div class="bottom_text" id="bottom_groupon">
+	    <h2>酒店团购</h2>
+	    <p>
+	      <a title="北京酒店团购" href="http://tuan.elong.com/beijing_0101_jiudian_tuangou/">北京酒店团购</a><span class="pad5">|</span>
+	      <a title="上海酒店团购" href="http://tuan.elong.com/shanghai_0201_jiudian_tuangou/">上海酒店团购</a><span class="pad5">|</span>
+	      <a title="三亚酒店团购" href="http://tuan.elong.com/sanya_2201_jiudian_tuangou/">三亚酒店团购</a><span class="pad5">|</span>
+	      <a title="广州酒店团购" href="http://tuan.elong.com/guangzhou_2001_jiudian_tuangou/">广州酒店团购</a><span class="pad5">|</span>
+	      <a title="杭州酒店团购" href="http://tuan.elong.com/hangzhou_1201_jiudian_tuangou/">杭州酒店团购</a><span class="pad5">|</span>
+	      <a title="厦门酒店团购" href="http://tuan.elong.com/xiamen_1401_jiudian_tuangou/">厦门酒店团购</a><span class="pad5">|</span>
+	      <a title="苏州酒店团购" href="http://tuan.elong.com/soochow_1102_jiudian_tuangou/">苏州酒店团购</a><span class="pad5">|</span>
+	      <a title="深圳酒店团购" href="http://tuan.elong.com/shenzhen_2003_jiudian_tuangou/">深圳酒店团购</a><span class="pad5">|</span>
+	      <a title="西安酒店团购" href="http://tuan.elong.com/xian_2701_jiudian_tuangou/">西安酒店团购</a><span class="pad5">|</span>
+	      <a title="成都酒店团购" href="http://tuan.elong.com/chengdu_2301_jiudian_tuangou/">成都酒店团购</a><span class="pad5">|</span>
+	      <a title="丽江酒店团购" href="http://tuan.elong.com/lijiang_2503_jiudian_tuangou/">丽江酒店团购</a><br>
+	      <a title="武汉酒店团购" href="http://tuan.elong.com/wuhan_1801_jiudian_tuangou/">武汉酒店团购</a><span class="pad5">|</span>
+	      <a title="宁波酒店团购" href="http://tuan.elong.com/ningbo_1202_jiudian_tuangou/">宁波酒店团购</a><span class="pad5">|</span>
+	      <a title="重庆酒店团购" href="http://tuan.elong.com/chongqing_0401_jiudian_tuangou/">重庆酒店团购</a><span class="pad5">|</span>
+	      <a title="大连酒店团购" href="http://tuan.elong.com/dalian_0801_jiudian_tuangou/">大连酒店团购</a><span class="pad5">|</span>
+	      <a title="南京酒店团购" href="http://tuan.elong.com/nanjing_1101_jiudian_tuangou/">南京酒店团购</a><span class="pad5">|</span>
+	      <a title="青岛酒店团购" href="http://tuan.elong.com/qingdao_1601_jiudian_tuangou/">青岛酒店团购</a><span class="pad5">|</span>
+	      <a title="桂林酒店团购" href="http://tuan.elong.com/guilin_2101_jiudian_tuangou/">桂林酒店团购</a><span class="pad5">|</span>
+	      <a title="天津酒店团购" href="http://tuan.elong.com/tianjin_0301_jiudian_tuangou/">天津酒店团购</a><span class="pad5">|</span>
+	      <a title="沈阳酒店团购" href="http://tuan.elong.com/shenyang_0802_jiudian_tuangou/">沈阳酒店团购</a><span class="pad5">|</span>    
+	    </p>
+     </div>
+	<div class="bottom_text" id="bottom_city">
+		<h2>热门城市</h2>
+		<p>
+		    <a title="北京酒店预订" href="http://hotel.elong.com/beijing/">北京酒店</a><span class="pad5">|</span>
+		    <a title="上海酒店预订" href="http://hotel.elong.com/shanghai/">上海酒店</a><span class="pad5">|</span>
+		    <a title="杭州酒店预订" href="http://hotel.elong.com/hangzhou/">杭州酒店</a><span class="pad5">|</span>
+		    <a title="成都酒店预订" href="http://hotel.elong.com/chengdu/">成都酒店</a><span class="pad5">|</span>
+		    <a title="深圳酒店预订" href="http://hotel.elong.com/shenzhen/">深圳酒店</a><span class="pad5">|</span>
+		    <a title="青岛酒店预订" href="http://hotel.elong.com/qingdao/">青岛酒店</a><span class="pad5">|</span>
+		    <a title="苏州酒店预订" href="http://hotel.elong.com/soochow/">苏州酒店</a><span class="pad5">|</span>
+		    <a title="广州酒店预订" href="http://hotel.elong.com/guangzhou/">广州酒店</a><span class="pad5">|</span>
+		    <a title="香港酒店预订" href="http://hotel.elong.com/hongkong/">香港酒店</a><span class="pad5">|</span>
+		    <a title="厦门酒店预订" href="http://hotel.elong.com/xiamen/">厦门酒店</a><span class="pad5">|</span>
+		    <a title="天津酒店预订" href="http://hotel.elong.com/tianjin/">天津酒店</a><span class="pad5">|</span>
+		    <a title="西安酒店预订" href="http://hotel.elong.com/xian/">西安酒店</a><span class="pad5">|</span>
+		    <a title="武汉酒店预订" href="http://hotel.elong.com/wuhan/">武汉酒店</a><span class="pad5">|</span>
+		    <a title="重庆酒店预订" href="http://hotel.elong.com/chongqing/">重庆酒店</a><span class="pad5">|</span>
+		    <a title="沈阳酒店预订" href="http://hotel.elong.com/shenyang/">沈阳酒店</a><span class="pad5">|</span>
+		    <a title="长沙酒店预订" href="http://hotel.elong.com/changsha/">长沙酒店</a><span class="pad5">|</span>
+		    <a title="三亚酒店预订" href="http://hotel.elong.com/sanya/">三亚酒店</a><span class="pad5">|</span>
+		    <a title="珠海酒店预订" href="http://hotel.elong.com/zhuhai/">珠海酒店</a><span class="pad5">|</span>
+		    <a title="宁波酒店预订" href="http://hotel.elong.com/ningbo/">宁波酒店</a><span class="pad5">|</span>
+		    <a title="南京酒店预订" href="http://hotel.elong.com/nanjing/">南京酒店</a><span class="pad5">|</span>
+		    <a title="大连酒店预订" href="http://hotel.elong.com/dalian/">大连酒店</a><span class="pad5">|</span>
+		    <a title="济南酒店预订" href="http://hotel.elong.com/jinan/">济南酒店</a><span class="pad5">|</span>
+		    <a title="昆明酒店预订" href="http://hotel.elong.com/kunming/">昆明酒店</a><span class="pad5">|</span>
+		    <a title="合肥酒店预订" href="http://hotel.elong.com/hefei/">合肥酒店</a><span class="pad5">|</span>
+		</p>
+	</div>
+	<div class="bottom_text" id="bottom_partner">
+	    <h2>合作伙伴</h2>
+	    <p>
+	      <a title="QQ网购·旅游" href="http://go.qq.com/" target="_blank">QQ网购·旅游</a><span class="pad5">|</span>
+	      <a title="西祠胡同" href="http://www.xici.net/" target="_blank">西祠胡同</a><span class="pad5">|</span>
+	      <a title="阳光旅行网" href="http://www.sunnychina.com/" target="_blank">阳光旅行网</a><span class="pad5">|</span>
+	      <a title="住哪网" href="http://www.zhuna.cn/" target="_blank">住哪网</a><span class="pad5">|</span>
+	      <a title="酷讯网" href="http://www.kuxun.cn/" target="_blank">酷讯网</a><span class="pad5">|</span>
+	      <a title="TripAdvisor" href="http://www.tripadvisor.cn/" target="_blank">TripAdvisor</a><span class="pad5">|</span>
+	      <a title="火车网" href="http://www.huoche.com.cn/" target="_blank">火车网</a><span class="pad5">|</span>
+	      <a title="吉祥航空" href="http://www.juneyaoair.com/" target="_blank">吉祥航空</a><span class="pad5">|</span>
+	      <a title="均瑶旅行网" href="http://travel.16885.com/" target="_blank">均瑶旅行网</a><span class="pad5">|</span>
+	      <a title="北京房产" href="http://bj.house.sina.com.cn/" target="_blank">北京房产</a><span class="pad5">|</span>
+	      <a title="装修家居" href="http://www.jiaju.com/" target="_blank">装修家居</a><span class="pad5">|</span>
+	      <a title="住哲酒店管理系统" href="http://www.zhuzher.com/" target="_blank">住哲酒店管理系统</a>
+	    </p>
+    </div>
+	<div class="bottom_text" id="bottom_event">
+	    <h2>常见酒店</h2>
+	    <p>
+	        <a title="如家快捷酒店" href="http://hotel.elong.com/hotel-chain/32.html">如家酒店官网</a><span class="pad5">|</span>
+	        <a title="布丁连锁酒店" href="http://hotel.elong.com/hotel-chain/111.html">布丁酒店</a><span class="pad5">|</span>
+	        <a title="酒店预订" href="http://hotel.elong.com/ ">酒店预订</a><span class="pad5">|</span>
+	        <a title="汉庭连锁酒店" href="http://hotel.elong.com/hotel-chain/56.html ">汉庭酒店官网</a><span class="pad5">|</span>
+	        <a title="7天连锁酒店" href="http://hotel.elong.com/hotel-chain/53.html ">七天连锁酒店官网</a><span class="pad5">|</span>
+	        <a title="希尔顿饭店" href="http://hotel.elong.com/hotel-chain/14.html">希尔顿酒店</a><span class="pad5">|</span>
+	        <a title="书香府邸附近酒店" href="http://hotel.elong.com/chengdu/place3220538/">书香府邸酒店</a><span class="pad5">|</span>
+	        <a title="情侣主题酒店" href="http://www.elong.com/promotion/web/fold/fold2/index.html">情侣酒店</a><span class="pad5">|</span>
+	        <a title="桔子酒店" href="http://hotel.elong.com/hotel-chain/65.html">桔子酒店</a><span class="pad5">|</span>
+	        <a title="格林豪泰连锁酒店" href="http://hotel.elong.com/hotel-chain/44.html">格林豪泰连锁酒店官网</a><span class="pad5">|</span>
+	        <a title="香格里拉大酒店" href="http://hotel.elong.com/hotel-chain/11.html">香格里拉酒店</a><span class="pad5">|</span>
+	        <a title="维也纳连锁酒店" href="http://hotel.elong.com/hotel-chain/97.html">维也纳酒店</a><span class="pad5">|</span>
+	        <a title="喜来登酒店官网" href="http://hotel.elong.com/hotel-chain/313.html">喜来登酒店</a><span class="pad5">|</span>
+	        <a title="公寓式酒店" href="http://jia.elong.com/">酒店式公寓</a><span class="pad5">|</span>
+	        <a title="长隆酒店" href="http://hotel.elong.com/guangzhou/52015001/">广州长隆酒店</a><span class="pad5">|</span>
+	        <a title="四季酒店官网" href="http://hotel.elong.com/hotel-chain/104.html">四季酒店</a><span class="pad5">|</span>
+	        <a title="万豪酒店官网" href="http://hotel.elong.com/hotel-chain/13.html">万豪酒店</a><span class="pad5">|</span>
+	        <a title="假日酒店" href="http://hotel.elong.com/hotel-chain/316.html">皇冠假日酒店</a><span class="pad5">|</span>
+	        <a title="上海书香世家酒店" href="http://hotel.elong.com/shanghai/50201315/">书香世家酒店</a><span class="pad5">|</span>
+	        <a title="凯宾斯基酒店官网" href="http://hotel.elong.com/hotel-chain/45.html">凯宾斯基酒店</a><span class="pad5">|</span>
+	        <a title="锦江之星连锁酒店" href="http://hotel.elong.com/hotel-chain/34.html">锦江之星连锁酒店官网</a><span class="pad5">|</span>
+	        <a title="洲际酒店官网" href="http://hotel.elong.com/hotel-chain/15.html">洲际酒店</a><span class="pad5">|</span>
+	        <a title="华住全季酒店官网" href="http://hotel.elong.com/hotel-chain/29323.html">全季酒店</a><span class="pad5">|</span>
+	        <a title="广州大学城附近宾馆" href="http://hotel.elong.com/guangzhou/center100756275/">广州大学城附近酒店</a><span class="pad5">|</span>
+	        <a title="威斯汀酒店官网" href="http://hotel.elong.com/hotel-chain/423.html">威斯汀酒店</a><span class="pad5">|</span>
+	        <a title="杭州西湖附近酒店" href="http://hotel.elong.com/hangzhou/place2846567/">杭州西湖附近的酒店</a><span class="pad5">|</span>
+	        <a title="W酒店官网" href="http://hotel.elong.com/hotel-chain/29303.html">w酒店</a><span class="pad5">|</span>
+	        <a title="速八酒店" href="http://hotel.elong.com/hotel-chain/41.html">速8酒店官网</a><span class="pad5">|</span>
+	        <a title="星程酒店官网" href="http://hotel.elong.com/hotel-chain/425.html">星程酒店</a><span class="pad5">|</span>
+	        <a title="丽思卡尔顿酒店官网" href="http://hotel.elong.com/hotel-chain/488.html">丽思卡尔顿酒店</a><span class="pad5">|</span>
+	        <a title="华天酒店官网" href="http://hotel.elong.com/hotel-chain/392.html">华天酒店</a><span class="pad5">|</span>
+	        <a title="半岛酒店集团" href="http://hotel.elong.com/hotel-chain/390.html">半岛酒店</a><span class="pad5">|</span>
+	        <a title="北京国宾酒店" href="http://hotel.elong.com/beijing/50101021/ ">国宾酒店</a><span class="pad5">|</span>
+	        <a title="凯悦酒店官网" href="http://hotel.elong.com/hotel-chain/10.html ">凯悦酒店</a><span class="pad5">|</span>
+	        <a title="宜必思酒店预订" href="http://hotel.elong.com/hotel-chain/312.html ">宜必思酒店</a><span class="pad5">|</span>
+	        <a title="千岛湖洲际酒店官网" href="http://hotel.elong.com/qiandaohu_hangzhou/51233010/ ">千岛湖洲际度假酒店</a><span class="pad5">|</span>
+	        <a title="北京盘古七星酒店" href="http://hotel.elong.com/beijing/50101507/ ">盘古七星酒店</a><span class="pad5">|</span>
+	        <a title="北戴河刘庄家庭旅馆" href="http://hotel.elong.com/beidaihe/00508256/">北戴河刘庄家庭旅馆</a><span class="pad5">|</span>
+	        <a title="公寓" href="http://www.elong.com/apartment/">公寓</a><span class="pad5">|</span>
+	        <a title="家庭旅馆" href="http://www.elong.com/family/">家庭旅馆</a><span class="pad5">|</span>
+	        <a title="青年旅舍" href="http://www.elong.com/youth/">青年旅舍</a><span class="pad5">|</span>
+	        <a title="情侣酒店" href="http://www.elong.com/love/">情侣酒店</a><span class="pad5">|</span>
+	        <a title="农家乐" href="http://www.elong.com/farmhouse/">农家乐</a><span class="pad5">|</span>
+	        <a title="短租公寓" href="http://www.elong.com/shortrent/">短租公寓</a><span class="pad5">|</span>
+	        <a title="客栈" href="http://www.elong.com/inn/">客栈</a><span >|</span>
+	        <a title="主题酒店" href="http://www.elong.com/theme/">主题酒店</a>
+	    </p>
+	</div>
+    </div>
+  
+  </body>
+</html>
+
+                 
+                 
+                 
+                  
+                      

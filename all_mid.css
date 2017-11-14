@@ -1,0 +1,317 @@
+﻿@CHARSET "UTF-8";
+li{list-style:none;}
+/*---------轮播图开始-------------*/
+   .thisis_tab { height:380px;width: 100%;position: relative; } 
+   .lunbotu {overflow: hidden; width: 100%; height: 380px; }
+   .lunbotu ul li { list-style: none;float: left;width:100%;height:380px;cursor: pointer;display: none;text-align: center;position: absolute; }
+   .lunbotu ul li i{ display: inline-block;width:100%;height:380px;background: no-repeat center bottom; } 
+   .dots { position: absolute;top: 360px; right: 50%;height: 30px;width: 250px;
+           height: 30px;margin-right: -603px;text-align: right;
+        }
+   .dots .dot {width: 24px;height: 4px;padding: 5px 3px;overflow: hidden; zoom: 1;
+              line-height: 9999px;display: inline-block;cursor: pointer; 
+              background: url(img/icon_index.png) no-repeat -508px -368px;
+      }
+   .active { background-position: -508px -387px !important; }
+/*---------轮播图结束-------------*/
+
+/*---------选项卡开始-------------*/
+   /* 选项卡左边 */
+   .xuanxiangka   { width:100%; height:300px;position: absolute; top:0px;}
+   .xuanxuangka_l { width:300px;margin-top: 40px;width: 1200px;  }
+   .thisis_info   { width: 600px;height:300px;box-shadow: 2px 2px 2px rgba(0,0,0,.2) }
+   .thisis_info .it_ul { width: 100px;heiht:300px; background-color:  #f3f3f3;
+                         display: inline-block; position: relative;
+    }
+   .thisis_info .it_ul li { list-style: none;width: 63px;height:59px;padding: 0 18px;
+                            font-size:14px;cursor:pointer;border-right: 1px solid #e1e1e1;
+                            border-bottom: 1px solid #ddd;line-height: -30px; 
+          }
+   .thisis_info .it_ul li.emty {list-style: none;width: 63px;height:60px;padding: 0 18px;border-top: 1px solid #f3f3f3; border-bottom-width: 0;margin-top: -1px; }
+   .ei_icon { display: inline-block; background: url(img/icon_index.png) no-repeat; width: 16px;height:18px;margin:22px 0px 0 0; }
+   .icon01  { background-position:-584px -345px;  }
+   .icon02  { background-position:-582px -367px;  }
+   .icon03  { background-position:-584px -386px;  }
+   .icon04  { background-position:-581px -316px;  }
+   .xuanxiang .icon11  { background-position:-557px -345px;  }
+   .xuanxiang .icon12  { background-position:-555px -367px;  }
+   .xuanxiang .icon13  { background-position:-557px -386px;  }
+   .xuanxiang .icon14  { background-position:-554px -316px;  }
+   .thisis_info .it_ul li a { position: relative;top:-5px;color: #555; }
+   .thisis_info .it_ul .xuanxiang a { color: #36d;position: relative;top:-5px; }
+   .xuanxiang  {  background-color: #fff;border-right-color: #fff !important;color: #36d;	}
+  
+   /* 选项卡右边 */
+   .cate { width: 500px;height:300px;background-color: #fff;float: right; }
+   .choose_self {display: none;}
+   
+/* 酒店 */
+      .hotel_span{ width: 440px;height:50px;border-bottom: 2px #ddd solid;}
+      .hotel_span span{ display: inline-block;color:#666;font-size:13px;
+                        font-weight:bold;cursor: pointer; padding: 17px 15px 13px 13px;
+        }
+      .neiwai{ border-bottom:2px #3377DD solid;color: #36d !important; }    
+      .hotel_span span:HOVER{color:#3377DD;}       
+      .country_hotel{padding: 20px 30px 0px 30px; font-size: 14px;color: #555;} 
+      .main_input_text{  width: 420px;height:30px;font-size: 12px;border-radius:4px;
+                         color:#666;margin-bottom: 20px;
+        }
+      .main_input_text input{border:1px #bbb solid;border-radius:4px;text-indent:6px;
+                             outline:0; width: 370px; height:28px;
+        } 
+          
+      .main_input_text_2{height:30px;font-size: 12px;color:#666;border-radius:4px;margin-bottom: 20px;} 
+      .main_input_text_2 input{width: 166px;height:28px; text-indent:6px;outline:0;
+                              border:1px #bbb solid;border-radius:4px;
+        }
+       /* 搜索按钮 */ 
+      .search{   width: 159px;background-color: #f55;color: #fff;height: 32px;
+                 line-height: 32px;  border-radius: 3px; font-size: 16px;
+                 text-align: center;  cursor: pointer;
+                 background-image: url("img/search.png");
+                 background-repeat: no-repeat;
+                 background-position: 43px 7px;}
+      .search:hover { background-color: #e55;}
+      .add_search:hover { background-color: #39f;color: #fff;background-image:url(img/search1.png) ; }
+      .add_search{ margin-left:10px;color: #555;padding: 0px 10px 0px 20px;
+                   height: 30px;line-height: 30px; border-radius: 3px;
+                   font-size: 14px; cursor: pointer;  border: 1px solid #ccc;
+                   background:url(img/search2.png) no-repeat 10px 7px;
+       }
+       
+          
+/* 机票 */    
+      .plane_ticket{width:450px;height:225px;padding: 0 30px 0px 30px;
+                    font-size: 14px;color: #555;
+         }      
+      .plane_ch_two{ position: relative;left:-5px; }
+         
+      .ticket_back{margin-top: 20px;}
+      .tic_child_div{margin-bottom: 20px;}
+      .tic_child_div input[type='text']{
+          width: 160px;height:28px;text-indent:6px;
+          outline:0; border:1px #bbb solid;border-radius:4px;
+        }
+      .tic_child_div span{
+          display: inline-block; width: 50px; height:25px; white-space:nowrap;
+          text-indent: 0;  text-align: center;
+        }
+      .indent_go{text-indent: 31px;}
+      .go_back_icon{
+          background-image: url("img/go_back1.png");
+          background-repeat: no-repeat;
+          background-position: 12px 8px;
+         }
+      .go_back_icon:HOVER{
+          background-image: url("img/go_back2.png");
+          background-position: 12px 11px;
+        }
+      
+      /* 火车票 */
+       .train_ticket{ width: 440px;height:190px;padding: 40px 30px 70px 30px; font-size: 14px;}
+       .train_ticket a{ font-size: 10px;  color:#ccc;}
+       .train_ticket input[type='text']{
+          width: 158px;height:28px; text-indent:6px; outline:0;
+          border:1px #bbb solid;border-radius:4px;
+       }
+      .go_back_city span{display: inline-block;width: 50px;height:25px;white-space:nowrap;
+                         text-indent: 0;text-align: center;background-image: url("img/go_back1.png");
+                         background-repeat: no-repeat; background-position: 12px 8px;
+       }
+      .go_back_city span:HOVER{background-image: url("img/go_back2.png");background-position: 12px 11px;}
+      .train_child_div{margin-bottom: 20px}
+      .only_go{  display: inline-block;width: 25px;height:10px;white-space:nowrap;
+                 text-indent: 0; text-align: center;
+                  background: url("img/only_go.png") 5px 0px no-repeat;
+      }
+      /* 手机版 */
+       .left{display: inline-block;text-align: center;}
+      .phone_Edition { width: 455px;height:300px;margin:25px 0 0 25px;	 }
+/*---------选项卡结束-------------*/
+
+
+
+/*-----------------详情开始-------------------------*/
+/* 登录展示个性内容 */
+   .mt20 { margin-top: 20px;}
+   .loginshow {    margin: 0 auto;min-width: 1200px;width: 1200px; }
+   .needlogin  { float: left; padding: 5px 20px;border-radius: 20px; background-color: #fff;border: 1px solid #ccc;font-size: 14px; }
+   .needlogin i { display: inline-block; width: 14px;height:14px; 
+                  background: url(img/icon_index.png) no-repeat -583px -16px;
+                  margin-right: 5px; position: relative;top: 3px;
+      }
+   .needlogin em { font-style: normal;font-weight: normal; }
+/* 详情切图 */
+   .p20clear  {clear: left; padding:20px 0 ;}  
+   .xiangqing { width: 1200px; } 
+   .xiangqing ul { width: 1200px;height: 260px;margin: 0 auto;overflow: hidden;}
+   .xiangqing ul li { float: left;height: 260px;width: 170; transition: width 1s;position: relative;cursor: pointer; }
+
+   .H_text  { overflow: hidden;width: 100%;height: 100%;background: rgba(0,0,0,.3);
+               position: absolute;top: 0;left: 0;
+    }
+   .H_text h4 { color: #fff;width: 30px;margin: 0 auto;display: block; font: 30px/30px Microsoft Yahei;padding-top: 30px;	 } 
+   .pic_auto {     width: 100%;height: 100%;   }
+   .pic_auto1 {background: url(img/20150422_ifold1.jpg) no-repeat center;}
+   .pic_auto2 {background: url(img/20150120_ifold2.jpg) no-repeat center;}
+   .pic_auto3 {background: url(img/20150120_ifold3.jpg) no-repeat center;}
+   .pic_auto4 {background: url(img/20150120_ifold4.jpg) no-repeat center;}
+   .pic_auto5 {background: url(img/20150120_ifold5.jpg) no-repeat center;}
+   .pic_auto6 {background: url(img/20150120_ifold6.jpg) no-repeat center;}
+   .pic_auto7 {background: url(img/20150120_ifold7.jpg) no-repeat center;}
+/*-----------------详情结束-------------------------*/
+
+
+/*--------目的地指数开始------- */
+  /* 目的地指数顶部 */
+   .pp_top  { width: 1200px;height:33px;padding: 5px 0; border-bottom: 2px solid #f55; }
+   .pp_top a {     font: 24px/30px Microsoft yahei;color: #f55; margin-right: 10px;}
+   .pp_top span {     font: 14px/30px Microsoft yahei; color: #999; }
+  /* 目的地指数标题 */ 
+   .pp_title { width: 1200px;height:28px;padding: 10px 0; }
+   .pp_title a { width: 65px;height:26px; padding-right: 20px; }
+   .pp_title a div{ background: url(img/icon_index.png) no-repeat 0 0; width: 24px;height:24px;display: inline-block;}
+   .pp_title a div.guonei{ background-position: -576px -101px;}
+   .pp_title a div.haiwai{ background-position: -576px -131px;}
+   .pp_title a em  { display: inline-block; font: 18px/26px Microsoft yahei;color: #555; position: relative;top:-4px; }   
+   .pp_title span { display: inline-block; width: 56px;height:22px;padding: 1px 9px;
+                    border-radius:12px;cursor: pointer; margin: 4px 10px 0;  
+                    font: 14px/22px Microsoft yahei;border: 1px solid #fff;
+                    position:relative;top:-3px;
+      }
+   .hoveron1 { color: #F66; border: 1px solid #F66 !important; }
+   .on1 { background-color: #f66;color:#fff;border: 1px solid #F66 !important; } 
+   /* 目的地指数最右边的更多 */
+   .pp_title i { display: inline-block; float: right;}
+   .pp_title i a {  color: #555;font: 14px/24px Microsoft yahei;padding-right: 0px;position: relative;top:5px; }
+   .pp_title i a b {    font-family: Simsun;font-weight: normal;}
+   .pp_title i a:hover { color: #f55; }
+ /* 目的地指数下面图片 */  
+   .pp_bottom { overflow: hidden;width: 1200px;height: 202px; }
+   .pp_bottom ul { list-style: none; }
+   .pp_bottom ul li{ list-style: none;width: 293px;height:202px;margin-right: 9px;float: left;position: relative; }  
+   .pic_info { height: 160px;width: 100%;overflow: hidden; }
+   .pic_info img { display: block;width: 100%;margin-top: -20px;position: relative;bottom: 0;transition: bottom .3s }
+   .pp_bottom ul li:hover img { bottom:10px; } 
+   .pp_bottom ul li:hover .introduce { border-bottom: 2px solid #f55; }
+   .city_name {     position: absolute; font: 24px/30px Microsoft yahei; color: #fff;
+                    top: 124px; left: 0;text-indent: .5em;text-shadow: 1px 1px 7px #000;
+      }
+   .introduce { width: 283px;height:30px;padding: 5px;background-color:  #f7f7f7;border-bottom: 1px solid #ccc; }
+   .introduce p { color: #555;  font: 14px/30px Microsoft yahei ;text-align: left;}
+   .mt20 { margin-top: 20px; }
+   
+   
+/*--------目的地指数结束------- */    
+
+
+/*----------------超值特价票开始--------------------- */ 
+   /* 超值特价票顶部 */
+   .bargain_top { width: 1200px; }
+   .bargain h2{ border-bottom: 2px solid #49f; padding: 5px 0; } 
+   .bargain h2 a { font: 24px/30px Microsoft yahei;color: #49f;padding-right: 10px;}
+   /* 超值特价票标题 */ 
+   .bg_title { width: 1200px;height:28px;padding: 10px 0; }
+   .bg_title a { width: 65px;height:26px; padding-right: 20px; }
+   .bg_title a div{ background: url(img/icon_index.png) no-repeat 0 0; width: 24px;height:24px;display: inline-block;}
+   .bg_title a div.jipiao{ background-position: -573px -191px;}
+   .bg_title a div.huochepiao{ background-position: -575px -221px;}
+   .bg_title a em  { display: inline-block; font: 18px/26px Microsoft yahei;color: #555; position: relative;top:-4px; }   
+   .bg_title span { display: inline-block; width: 56px;height:22px;padding: 1px 9px;
+                    border-radius:12px;cursor: pointer; margin: 4px 10px 0;  
+                    font: 14px/22px Microsoft yahei;border: 1px solid #fff;
+                    position:relative;top:-3px;
+      }
+   .hoveron2 { color: #49f; border: 1px solid #49f !important; }
+   .on2 { background-color: #49f;;color:#fff; border: 1px solid #49f !important; }    
+   /* 超值特价票最右边的更多 */
+   .bg_title i { display: inline-block; float: right;}
+   .bg_title i a {  color: #555;font: 14px/24px Microsoft yahei;padding-right: 0px;position: relative;top:5px; }
+   .bg_title i a b {    font-family: Simsun;font-weight: normal;}
+   .bg_title i a:hover { color: #f55; }    
+   /* 超值特价票下面 */
+   .bg_bottom { width: 1200px;height:102px; }
+   .bg_bottom ul li { list-style: none; width: 198px;height:98px;float: left;
+                      background: #f4f9ff;border: 1px solid #d8e8fe; 
+      }
+   .bg_bottom ul li:hover { border-bottom: 2px solid #49f;border-color:#49f; }
+   .bg_bottom ul li span { display: inline-block; width:178px;height:30px;margin:10px 0 0 10px;color: #555; }
+   .bg_bottom ul li span b { width: 70px;height:30px;overflow: hidden;display:inline-block; line-height:30px;
+                             font: 14px/30px Microsoft yahei;text-align: center;color: #555;
+     }
+   .bg_bottom ul li span b.a_price { color:#fc6622; }
+   .bg_bottom ul li span i { display: inline-block; width: 30px;height:20px;margin-bottom:5px;text-align:center;
+                               background: url(img/icon_index.png) no-repeat;font: 12px Microsoft yahei;
+    }
+   .bg_bottom ul li span i.airphoto { background-position:  -569px -163px; }
+   .bg_bottom ul li span i.train { background-position:  -527px -164px; }
+   .bg_bottom ul li span i.cut_price { background: #090;color: #fff;border-radius: 8px;position: relative;top:-10px; }
+   .hid  { visibility: hidden; }
+
+/*----------------超值特价票结束--------------------- */  
+
+/*----------------旅游指南开始--------------------- */
+  /* 顶部  */
+   .tra_guide_top  { width: 1200px; }
+   .tra_guide_top h2{ border-bottom: 2px solid #77cc11; padding: 5px 0; } 
+   .tra_guide_top h2 a { font: 24px/30px Microsoft yahei;color: #77cc11;padding-right: 10px;}
+   .tra_guide_bot { width: 1200px;height:222px; }
+  /* 左边切换图  */ 
+   .oneone { width: 580px;height:222px;margin-right: 15px;display: inline-block; }
+   .one_left { width: 195px;height:220px;display: inline-block;float: left;  }
+   .one_right { width: 380px;height:220px; display: inline-block; float: left;}
+   .one_0 { width: 195px;height:54px;border-bottom: 1px solid #ccc;position: relative;
+            float: left; text-align: left;font: 14px/57px Microsoft yahei;color: #555;
+     }
+   .one_0 a { width: 180px;height:54px;line-height: 54px;padding-left:15px;display: inline-block;color: #555;background-color:#fff; }
+   .one_0 span { width: 12px;height: 19px;display: block;position: absolute;left:195px;top:18px;
+                 background: url(img/icon_index.png) no-repeat -547px 0;display: none;
+      }
+   .changethis{ color: #fff !important;background-color:#77cc11 !important; }
+   
+   
+  /* 右边两个图  */
+   .twotwo { width: 600px;height:222px;display: inline-block;}
+   .twotwo ul li { list-style: none;float: left; }
+   .twotwo ul li:HOVER .other{ border-bottom: 2px solid #77cc11; }
+   .other { width: 283px;height:30px;padding: 5px;background-color:  #f7f7f7;border-bottom: 1px solid #ccc; }
+   .other p { color: #f49;  font: 14px/30px Microsoft yahei ;text-align: left;}
+
+/*----------------旅游指南结束--------------------- */
+
+/*----------------邮箱开始--------------------- */
+   .server_top { width: 1160px;height:60px;padding: 20px;background: #f7f7f7;border-bottom: 1px solid #e5e5e5; }
+   .server_top ul li { list-style: none;width: 290px;height: 60px;float: left; }
+   .server_top ul li i { display: inline-block; height: 60px;width: 60px;background: url(img/icon_index.png) no-repeat ; margin-right: 10px;float: left; }
+   .server_top ul li i:hover { -webkit-animation: tada 2s ease both; }
+   .server_top ul li span { float: left;line-height: 60px;font: 16px/60px Microsoft yahei;display: inline-block; }
+   .quan { background-position: -91px -4px  !important; }
+   .ding { background-position: -159px -4px !important; }
+   .guo  { background-position: -228px -4px !important; }
+   .xiao { background-position: -295px -6px !important; }   
+   .server_bot  { width: 1200px;height:80px;background: #f7f7f7;overflow: hidden;position: relative; }
+   .server_bot:hover .server_pic { margin-left: 5px; }
+   .server_bot .server_agr a{ font: 14px/80px Microsoft yahei;color: #37e;float: right;padding-right: 10px; }
+   .server_bot .server_agr a:hover{ color: #f55; }
+   .server_pic { background: url(img/icon_index.png) no-repeat -384px -20px;
+                height: 80px;width: 110px;margin-left: -20px;transition: margin .5s;
+                -webkit-transition: margin .5s;float: left;
+    }
+   .input_email { position: absolute;top:25px;left:280px; }
+   .input_email span { font: 16px/30px Microsoft yahei;color: #71829d;padding: 0 5px;display: inline-block; }
+   .input_email input[type='text']{ width: 200px;height: 28px;border: 1px solid #ccc;color: #555;  }
+   .input_email input[type='button']{height: 28px; width: 80px;background: #3377dd;color: #fff;
+                                     border: none; cursor: pointer;text-align: center;margin-left: -3px;
+     }        
+/* 抖动动画 */   
+@-webkit-keyframes tada{
+0%      {-webkit-transform: rotate(15deg);}
+10%, 30%{-webkit-transform: rotate(20deg);}
+20%, 40%{-webkit-transform: rotate(-20deg);}
+50%, 70%{-webkit-transform: rotate(25deg);}
+60%, 80%{-webkit-transform: rotate(-25deg);}
+90%     {-webkit-transform: rotate(15deg);}
+100%    {-webkit-transform: rotate(0);}
+}
+  
+/*----------------邮箱结束--------------------- */
